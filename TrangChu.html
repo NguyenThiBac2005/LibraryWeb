@@ -4,10 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BookHub - Nền tảng chia sẻ sách và tài liệu</title>
-    <link rel="stylesheet" href="Login.css">
     <link rel="stylesheet" href="TrangChu.css">
-   
-    
 </head>
 <body>
     <!-- Header Section -->
@@ -15,7 +12,7 @@
         <div class="container">
             <div class="header-content">
                 <div class="logo">
-                    <img src="/api/placeholder/40/40" alt="BookHub Logo">
+                    <img src="./asset/img/logo.png" alt="BookHub Logo">
                     <h1>BookHub</h1>
                 </div>
                 
@@ -27,7 +24,16 @@
                 <nav>
                     <ul>
                         <li><a href="./TrangChu.html" class="nav-link" data-page="home">Trang chủ</a></li>
-                        <li><a href="#" class="nav-link" data-page="books">Danh mục sách</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="nav-link" data-page="books">Danh mục sách</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="./html/vanhoc/vanhoc.html">Văn học</a></li>
+                                <li><a href="./html/khoahoc/khoahoc.html">Khoa học</a></li>
+                                <li><a href="./html/kinhte/kinhte.html">Kinh tế</a></li>
+                                <li><a href="./html/tamlihoc/tamlihoc.html">Tâm lý học</a></li>
+                                <li><a href="./html/ngoaingu/ngoaingu.html">Ngoại ngữ</a></li>
+                            </ul>
+                        </li>
                         <li><a href="#" class="nav-link" data-page="reviews">Góc Review</a></li>
                         <li><a href="#" class="nav-link" data-page="upload">Chia sẻ sách</a></li>
                         <li><a href="#" class="nav-link" data-page="contact">Liên hệ</a></li>
@@ -184,4 +190,39 @@
 
                 <!-- Reviews Section -->
                 <section class="reviews">
-                    <h2 class="section-title">Góc Review Sách</h
+                    <h2 class="section-title">Góc Review Sách</h2>
+                    <div class="review-container">
+                        <div class="review-card">
+                            <h3>Lê Văn C</h3>
+                            <p>Sapiens: Lược Sử Loài Người</p>
+                            <p>Một cuốn sách đầy kiến thức và thú vị về lịch sử loài người. Rất đáng đọc!</p>
+                        </div>
+                        <div class="review-card">
+                            <h3>Phạm Văn D</h3>
+                            <p>Hành Trình Về Phương Đông</p>
+                            <p>Một cuốn sách đầy triết lý và ý nghĩa về cuộc sống. Rất đáng đọc!</p>
+                        </div>
+                        <div class="review-card">
+                            <h3>Nguyễn Thị E</h3>
+                            <p>Cuộc Sống Không Giới Hạn</p>
+                            <p>Một cuốn sách truyền cảm hứng mạnh mẽ. Đọc xong cảm thấy tràn đầy năng lượng!</p>
+                        </div>
+                        <div class="review-card">
+                            <h3>Nguyễn Văn A</h3>
+                            <p>Đắc Nhân Tâm</p>
+                            <p>Một cuốn sách tuyệt vời giúp tôi thay đổi cách nhìn nhận cuộc sống và giao tiếp với mọi người.</p>
+                        </div>
+                        <div class="review-card">
+                            <h3>Trần Thị B</h3>
+                            <p>Nhà Giả Kim</p>
+                            <p>Câu chuyện đầy cảm hứng về hành trình theo đuổi ước mơ. Một tác phẩm không thể bỏ qua!</p>
+                        </div>
+                    </div>
+                </section>
+
+        </div>
+    </main>
+    <script src="./js/slider.js"></script>
+</body>
+</html>
+``` 

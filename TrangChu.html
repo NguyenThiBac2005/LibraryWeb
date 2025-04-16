@@ -4,10 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BookHub - Nền tảng chia sẻ sách và tài liệu</title>
-    <link rel="stylesheet" href="Login.css">
     <link rel="stylesheet" href="TrangChu.css">
-    <link rel="stylesheet" href="style2.css">
-    
 </head>
 <body>
     <!-- Header Section -->
@@ -15,7 +12,7 @@
         <div class="container">
             <div class="header-content">
                 <div class="logo">
-                    <img src="/api/placeholder/40/40" alt="BookHub Logo">
+                    <img src="./asset/img/logo.png" alt="BookHub Logo">
                     <h1>BookHub</h1>
                 </div>
                 
@@ -26,8 +23,17 @@
                 
                 <nav>
                     <ul>
-                        <li><a href="#" class="nav-link" data-page="home">Trang chủ</a></li>
-                        <li><a href="#" class="nav-link" data-page="books">Danh mục sách</a></li>
+                        <li><a href="./TrangChu.html" class="nav-link" data-page="home">Trang chủ</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="nav-link" data-page="books">Danh mục sách</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="./html/vanhoc/vanhoc.html">Văn học</a></li>
+                                <li><a href="./html/khoahoc/khoahoc.html">Khoa học</a></li>
+                                <li><a href="./html/kinhte/kinhte.html">Kinh tế</a></li>
+                                <li><a href="./html/tamlihoc/tamlihoc.html">Tâm lý học</a></li>
+                                <li><a href="./html/ngoaingu/ngoaingu.html">Ngoại ngữ</a></li>
+                            </ul>
+                        </li>
                         <li><a href="#" class="nav-link" data-page="reviews">Góc Review</a></li>
                         <li><a href="#" class="nav-link" data-page="upload">Chia sẻ sách</a></li>
                         <li><a href="#" class="nav-link" data-page="contact">Liên hệ</a></li>
@@ -44,8 +50,6 @@
 
     <!-- Main Content -->
     <main>
-        <style>
-        </style>
         <div class="container">
             <!-- Home Page Content -->
             <section id="home-page">
@@ -60,27 +64,42 @@
                 <section class="categories">
                     <h2 class="section-title">Danh mục sách</h2>
                     <div class="category-grid">
-                        <div class="category-card">
-                            <!-- Đây là nơi chúng ta thay đổi URL hình ảnh cho danh mục Văn học -->
-                            <img src="https://cdn.tgdd.vn/Files/2023/03/10/1516432/10-cuon-sach-van-hoc-hay-tieu-thuyet-van-hoc-kinh-dien-202303110852195759.jpg" alt="Văn học">
-                            <h3>Văn học</h3>
-                        </div>
-                        <div class="category-card">
-                            <img src="https://static.tramdoc.vn/image/img.news/0/0/0/1461.jpg?v=1&w=480&h=295&nocache=1" alt="Khoa học">
-                            <h3>Khoa học</h3>
-                        </div>
-                        <div class="category-card">
-                            <img src="https://listsach.com/wp-content/uploads/2022/07/Top-nhung-quyen-sach-kinh-te-hoc-hay-nen-doc.jpg" alt="Kinh tế">
-                            <h3>Kinh tế</h3>
-                        </div>
-                        <div class="category-card">
-                            <img src="https://tuyensinhdonga.edu.vn/wp-content/uploads/2021/03/nhung-don-tam-ly-trong-thuyet-phuc-min-e1722418417923.jpg" alt="Tâm lý học">
-                            <h3>Tâm lý học</h3>
-                        </div>
-                        <div class="category-card">
-                            <img src="https://khosachngoaingu.com/wp-content/uploads/2017/12/banner-3-new-1.jpg" alt="Ngoại ngữ">
-                            <h3>Ngoại ngữ</h3>
-                        </div>
+                        <a href="./html/vanhoc/vanhoc.html">
+                            <div class="category-card">
+                                <!-- Đây là nơi chúng ta thay đổi URL hình ảnh cho danh mục Văn học -->
+                                <img src="./asset/img/vanhoc_tieuthuyet/nhagiakim.jpg" alt="Văn học">
+                                <h3>Văn học</h3>
+                            </div>
+                        </a>
+                        
+                        <a href="./html/khoahoc/khoahoc.html">
+                            <div class="category-card">
+                                <img src="./asset/img/khoahoc/1461.jpg" alt="Khoa học">
+                                <h3>Khoa học</h3>
+                            </div>
+                        </a>
+                        
+                        <a href="./html/kinhte/kinhte.html">
+                            <div class="category-card">
+                                <img src="./asset/img/kinhte/Top-nhung-quyen-sach-kinh-te-hoc-hay-nen-doc.jpg" alt="Kinh tế">
+                                <h3>Kinh tế</h3>
+                            </div>
+                        </a>
+                        
+                        <a href="./html/tamlihoc/tamlihoc.html">
+                            <div class="category-card">
+                                <img src="./asset/img/tamlihoc/tamlihoc.jpg" alt="Tâm lý học">
+                                <h3>Tâm lý học</h3>
+                            </div>
+                        </a>
+                        
+                        <a href="./html/ngoaingu/ngoaingu.html">
+                            <div class="category-card">
+                                <img src="./asset/img/ngoaingu/banner-3-new-1.jpg" alt="Ngoại ngữ">
+                                <h3>Ngoại ngữ</h3>
+                            </div>
+                        </a>
+                        
                     </div>
                 </section>
 
@@ -89,75 +108,121 @@
                     <h2 class="section-title">Sách nổi bật</h2>
                     <div class="book-grid">
                         <div class="book-card" data-book-id="1">
-                            <div class="book-cover">
-                                <img src="https://firstnews.vn/upload/products/original/-1726817123.jpg" alt="Đắc Nhân Tâm">
-                            </div>
-                            <div class="book-info">
-                                <h3 class="book-title">Đắc Nhân Tâm</h3>
-                                <p class="book-author">Dale Carnegie</p>
-                                <div class="book-meta">
-                                    <span class="book-year">2019</span>
-                                    <div class="download-count">
-                                        <i>⬇️</i>
-                                        <span>1,245</span>
+                            <a href="./html/vanhoc/sach/dacnhantam.html">
+                                <div class="book-cover">
+                                    <img src="./asset/img/vanhoc_tieuthuyet/dacnhantam.jpg" alt="Đắc Nhân Tâm">
+                                </div>
+                                <div class="book-info">
+                                    <h3 class="book-title">Đắc Nhân Tâm</h3>
+                                    <p class="book-author">Dale Carnegie</p>
+                                    <div class="book-meta">
+                                        <span class="book-year">2019</span>
+                                        <div class="download-count">
+                                            <i>⬇️</i>
+                                            <span>1,245</span>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
+                            </a>
+                            
                         </div>
 
                         <div class="book-card" data-book-id="2">
-                            <div class="book-cover">
-                                <img src="https://fs.chungta.com/thumbnails/14124e6776864c6d8fb32525a6f38daa/0/0/0/3b1e6293b0aa4d4c982ff6373ea9a427/0/2015/0000445020307/minh-triet-ve-cuoc-doi-trong-nha-gia-kim-cua-paulo-coelho.jpg" alt="Nhà Giả Kim">
-                            </div>
-                            <div class="book-info">
-                                <h3 class="book-title">Nhà Giả Kim</h3>
-                                <p class="book-author">Paulo Coelho</p>
-                                <div class="book-meta">
-                                    <span class="book-year">2020</span>
-                                    <div class="download-count">
-                                        <i>⬇️</i>
-                                        <span>986</span>
+                            <a href="./html/vanhoc/sach/nhagiakim.html">
+                                <div class="book-cover">
+                                    <img src="./asset/img/vanhoc_tieuthuyet/nhagiakim2.jpg" alt="Nhà Giả Kim">
+                                </div>
+                                <div class="book-info">
+                                    <h3 class="book-title">Nhà Giả Kim</h3>
+                                    <p class="book-author">Paulo Coelho</p>
+                                    <div class="book-meta">
+                                        <span class="book-year">2020</span>
+                                        <div class="download-count">
+                                            <i>⬇️</i>
+                                            <span>986</span>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
+                            </a>
+                            
                         </div>
 
                         <div class="book-card" data-book-id="3">
-                            <div class="book-cover">
-                                <img src="https://lh4.googleusercontent.com/proxy/92QuMwJnEjAGTfNMAB9joNXoouO9NuduIgBPaKtL0h0UPvaeTFj3Xef967P3mbrE7F1J5cfnvn2PKw8cwIINHMhxf9L2C3bPRQ2Ef14EVeZAIb_rdt3WzLOb98FXMVhAs2lNuT9ABlcODTeUqt5z27FQ8fQE4ZtQEw" alt="Tôi Tài Giỏi, Bạn Cũng Thế">
-                            </div>
-                            <div class="book-info">
-                                <h3 class="book-title">Tôi Tài Giỏi, Bạn Cũng Thế</h3>
-                                <p class="book-author">Adam Khoo</p>
-                                <div class="book-meta">
-                                    <span class="book-year">2018</span>
-                                    <div class="download-count">
-                                        <i>⬇️</i>
-                                        <span>765</span>
+                            <a href="./html/vanhoc/sach/toitaigioi.html">
+                                <div class="book-cover">
+                                    <img src="./asset/img/vanhoc_tieuthuyet/toitaigioi.jpg" alt="Tôi Tài Giỏi, Bạn Cũng Thế">
+                                </div>
+                                <div class="book-info">
+                                    <h3 class="book-title">Tôi Tài Giỏi, Bạn Cũng Thế</h3>
+                                    <p class="book-author">Adam Khoo</p>
+                                    <div class="book-meta">
+                                        <span class="book-year">2018</span>
+                                        <div class="download-count">
+                                            <i>⬇️</i>
+                                            <span>765</span>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
+                            </a>
+                            
                         </div>
 
                         <div class="book-card" data-book-id="4">
-                            <div class="book-cover">
-                                <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1619172067i/57826396.jpg" alt="Sapiens: Lược Sử Loài Người">
-                            </div>
-                            <div class="book-info">
-                                <h3 class="book-title">Sapiens: Lược Sử Loài Người</h3>
-                                <p class="book-author">Yuval Noah Harari</p>
-                                <div class="book-meta">
-                                    <span class="book-year">2021</span>
-                                    <div class="download-count">
-                                        <i>⬇️</i>
-                                        <span>542</span>
+                            <a href="./html/vanhoc/sach/luocsuloainguoi.html">
+                                <div class="book-cover">
+                                    <img src="./asset/img/vanhoc_tieuthuyet/luocsuloainguoi.jpg" alt="Sapiens: Lược Sử Loài Người">
+                                </div>
+                                <div class="book-info">
+                                    <h3 class="book-title">Sapiens: Lược Sử Loài Người</h3>
+                                    <p class="book-author">Yuval Noah Harari</p>
+                                    <div class="book-meta">
+                                        <span class="book-year">2021</span>
+                                        <div class="download-count">
+                                            <i>⬇️</i>
+                                            <span>542</span>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
+                            </a>
                         </div>
                     </div>
                 </section>
 
                 <!-- Reviews Section -->
                 <section class="reviews">
-                    <h2 class="section-title">Góc Review Sách</h
+                    <h2 class="section-title">Góc Review Sách</h2>
+                    <div class="review-container">
+                        <div class="review-card">
+                            <h3>Lê Văn C</h3>
+                            <p>Sapiens: Lược Sử Loài Người</p>
+                            <p>Một cuốn sách đầy kiến thức và thú vị về lịch sử loài người. Rất đáng đọc!</p>
+                        </div>
+                        <div class="review-card">
+                            <h3>Phạm Văn D</h3>
+                            <p>Hành Trình Về Phương Đông</p>
+                            <p>Một cuốn sách đầy triết lý và ý nghĩa về cuộc sống. Rất đáng đọc!</p>
+                        </div>
+                        <div class="review-card">
+                            <h3>Nguyễn Thị E</h3>
+                            <p>Cuộc Sống Không Giới Hạn</p>
+                            <p>Một cuốn sách truyền cảm hứng mạnh mẽ. Đọc xong cảm thấy tràn đầy năng lượng!</p>
+                        </div>
+                        <div class="review-card">
+                            <h3>Nguyễn Văn A</h3>
+                            <p>Đắc Nhân Tâm</p>
+                            <p>Một cuốn sách tuyệt vời giúp tôi thay đổi cách nhìn nhận cuộc sống và giao tiếp với mọi người.</p>
+                        </div>
+                        <div class="review-card">
+                            <h3>Trần Thị B</h3>
+                            <p>Nhà Giả Kim</p>
+                            <p>Câu chuyện đầy cảm hứng về hành trình theo đuổi ước mơ. Một tác phẩm không thể bỏ qua!</p>
+                        </div>
+                    </div>
+                </section>
+
+        </div>
+    </main>
+    <script src="./js/slider.js"></script>
+</body>
+</html>
+``` 

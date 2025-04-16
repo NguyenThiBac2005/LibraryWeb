@@ -9,11 +9,12 @@
 </head>
 <body>
     <!-- Header Section -->
+    <!-- Header Section -->
     <header>
         <div class="container">
             <div class="header-content">
                 <div class="logo">
-                    <img src="/api/placeholder/40/40" alt="BookHub Logo">
+                    <img src="./asset/img/logo.png" alt="BookHub Logo">
                     <h1>BookHub</h1>
                 </div>
                 
@@ -24,8 +25,17 @@
                 
                 <nav>
                     <ul>
-                        <li><a href="../../TrangChu.html" class="nav-link" data-page="home">Trang chủ</a></li>
-                        <li><a href="#" class="nav-link" data-page="books">Danh mục sách</a></li>
+                        <li><a href="./TrangChu.html" class="nav-link" data-page="home">Trang chủ</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="nav-link" data-page="books">Danh mục sách</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="./html/vanhoc/vanhoc.html">Văn học</a></li>
+                                <li><a href="./html/khoahoc/khoahoc.html">Khoa học</a></li>
+                                <li><a href="./html/kinhte/kinhte.html">Kinh tế</a></li>
+                                <li><a href="./html/tamlihoc/tamlihoc.html">Tâm lý học</a></li>
+                                <li><a href="./html/ngoaingu/ngoaingu.html">Ngoại ngữ</a></li>
+                            </ul>
+                        </li>
                         <li><a href="#" class="nav-link" data-page="reviews">Góc Review</a></li>
                         <li><a href="#" class="nav-link" data-page="upload">Chia sẻ sách</a></li>
                         <li><a href="#" class="nav-link" data-page="contact">Liên hệ</a></li>

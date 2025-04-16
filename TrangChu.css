@@ -26,6 +26,10 @@ a {
     color: var(--primary-color);
 }
 
+a:hover{
+    color: black;
+}
+
 ul {
     list-style: none;
 }

@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BookHub - Nền tảng chia sẻ sách và tài liệu</title>
     <link rel="stylesheet" href="TrangChu.css">
+    <link rel="stylesheet" href="./css/auth.css">
+    <script src="./js/popup.js"></script>
 </head>
 <body>
     <!-- Header Section -->
@@ -40,10 +42,44 @@
                     </ul>
                 </nav>
                 
-                <div class="user-actions">
-                    <button class="btn btn-primary" id="loginBtn">Đăng nhập</button>
-                    <button class="btn btn-outline" id="registerBtn">Đăng ký</button>
+                <!-- Popup Đăng nhập -->
+                <div id="loginModal" class="modal">
+                    <div class="modal-content">
+                        <span class="close" id="closeLogin">&times;</span>
+                        <h2>Đăng nhập</h2>
+                        <form>
+                            <label for="username">Tên đăng nhập:</label>
+                            <input type="text" id="username" class="input-field" name="username" required>
+                            <label for="password">Mật khẩu:</label>
+                            <input type="password" id="password" class="input-field" name="password" required>
+                            <button type="submit" class="btn btn-primary">Đăng nhập</button>
+                        </form>
+                    </div>
                 </div>
+
+                <!-- Popup Đăng ký -->
+                <div id="registerModal" class="modal">
+                    <div class="modal-content">
+                        <span class="close" id="closeRegister">&times;</span>
+                        <h2>Đăng ký</h2>
+                        <form>
+                            <label for="newUsername">Tên đăng nhập:</label>
+                            <input type="text" id="newUsername" class="input-field" name="newUsername" required>
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" class="input-field" name="email" required>
+                            <label for="newPassword">Mật khẩu:</label>
+                            <input type="password" id="newPassword" class="input-field" name="newPassword" required>
+                            <button type="submit" class="btn btn-primary">Đăng ký</button>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="user-actions">
+                    <a href="#" id="loginBtn" class="btn btn-primary">Đăng nhập</a>
+                    <a href="#" id="registerBtn" class="btn btn-outline">Đăng ký</a>
+                </div>
+
+                
             </div>
         </div>
     </header>
@@ -222,7 +258,6 @@
 
         </div>
     </main>
-    <script src="./js/slider.js"></script>
+    
 </body>
 </html>
-``` 

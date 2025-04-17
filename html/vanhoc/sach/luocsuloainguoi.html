@@ -1,42 +1,51 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Lược sử loài người - Giới thiệu sách</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <h1 style="text-align:center;">📘 Lược Sử Loài Người (Sapiens)</h1>
+  <div class="container">
+    <h1>📘 Lược Sử Loài Người (Sapiens)</h1>
 
-  <table width="90%" align="center" cellpadding="20" border="0">
-    <tr>
-      <!-- Cột ảnh bên trái -->
-      <td width="40%" align="center">
-        <img src="https://upload.wikimedia.org/wikipedia/en/4/4e/Sapiens_A_Brief_History_of_Humankind.jpg" alt="Bìa sách Sapiens" width="250">
-      </td>
+    <div class="book-layout">
+      <div class="left-column">
+        <img src="https://upload.wikimedia.org/wikipedia/en/4/4e/Sapiens_A_Brief_History_of_Humankind.jpg" alt="Bìa sách Sapiens" class="book-cover" />
+      </div>
 
-      <!-- Cột nội dung bên phải -->
-      <td width="60%">
-        <p><strong>Lược sử loài người</strong> (Sapiens) là một tác phẩm nổi bật của Yuval Noah Harari, kể lại hành trình tiến hóa của loài người từ một sinh vật bình thường trong tự nhiên trở thành kẻ thống trị toàn cầu.</p>
-
-        <p>Cuốn sách dẫn dắt qua ba cuộc cách mạng lớn: Nhận thức, Nông nghiệp và Khoa học, giúp người đọc hiểu cách mà lịch sử, niềm tin, tiền bạc và các tổ chức xã hội được hình thành và phát triển.</p>
-
-        <ul>
-          <li>🧠 Phân tích sắc sảo về lịch sử và sự tiến hóa</li>
-          <li>🌍 Góc nhìn mới về xã hội, tôn giáo, và quyền lực</li>
-          <li>📈 Kết nối quá khứ - hiện tại - tương lai</li>
-          <li>💬 Viết dễ hiểu, đầy ví dụ và chất suy ngẫm</li>
-        </ul>
-
-        <p><strong>Thông tin thêm:</strong><br>
-        ✒️ Tác giả: Yuval Noah Harari<br>
-        📅 Năm xuất bản: 2011<br>
-        🌐 Dịch ra hơn 60 ngôn ngữ, bán hơn 20 triệu bản<br>
-        📘 Phiên bản tiếng Việt do NXB Dân Trí phát hành
+      <div class="right-column">
+        <p class="description">
+          <strong>Lược sử loài người</strong> là tác phẩm nổi tiếng toàn cầu của Yuval Noah Harari, khám phá quá trình tiến hóa của loài người từ thời tiền sử đến thời hiện đại.
         </p>
 
-        <p><em>“Lược sử loài người”</em> là một cuốn sách không chỉ để đọc mà để chiêm nghiệm – về chính bản thân ta và hành trình nhân loại.</p>
-      </td>
-    </tr>
-  </table>
+        <p class="description">
+          Cuốn sách được chia thành ba phần chính: Cách mạng nhận thức, Cách mạng nông nghiệp và Cách mạng khoa học. Với văn phong rõ ràng và sắc sảo, tác giả giúp người đọc hiểu cách loài người xây dựng xã hội, tôn giáo, kinh tế và tương lai.
+        </p>
+
+        <ul class="features">
+          <li>🧠 Khám phá tư duy và sự khác biệt của Homo sapiens</li>
+          <li>🌍 Phân tích sâu sắc lịch sử, văn hóa, tôn giáo, tiền tệ</li>
+          <li>📈 Dự báo những xu hướng tương lai của nhân loại</li>
+          <li>💬 Gợi mở nhiều câu hỏi triết học về ý nghĩa sự tồn tại</li>
+        </ul>
+
+        <button onclick="toggleMoreInfo()">Xem thêm</button>
+        <div id="more-info" class="hidden">
+          <p>
+            <strong>Thông tin chi tiết:</strong><br/>
+            ✒️ Tác giả: Yuval Noah Harari<br/>
+            📅 Năm xuất bản: 2011<br/>
+            🌐 Dịch ra hơn 60 ngôn ngữ, bán hơn 20 triệu bản toàn cầu<br/>
+            📘 Bản tiếng Việt do NXB Dân Trí phát hành
+          </p>
+          <p><em>Lược sử loài người</em> không chỉ là sách lịch sử – mà là hành trình nhận thức về chính chúng ta, về thế giới do chúng ta tạo ra, và cả những thách thức mà nhân loại đang phải đối mặt.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>

@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bách khoa cuộc sống - BookHub</title>
+    <title>Vocab 1 - BookHub</title>
     <link rel="stylesheet" href="../../../TrangChu.css">
     <link rel="stylesheet" href="../../../css/danhmucsach.css">
     <link rel="stylesheet" href="../../../css/auth.css">
 </head>
 <body>
 
-    <!-- Header giống với các trang khác -->
+    <!-- Header -->
     <header>
         <div class="container">
             <div class="header-content">
@@ -29,14 +29,13 @@
                             <a href="#" class="nav-link">Danh mục sách</a>
                             <ul class="dropdown-menu">
                                 <li><a href="../../vanhoc/vanhoc.html">Văn học</a></li>
-                                <li><a href="../khoahoc.html">Khoa học</a></li>
+                                <li><a href="../../khoahoc/khoahoc.html">Khoa học</a></li>
                                 <li><a href="../../kinhte/kinhte.html">Kinh tế</a></li>
                                 <li><a href="../../tamlihoc/tamlihoc.html">Tâm lý học</a></li>
                                 <li><a href="../../ngoaingu/ngoaingu.html">Ngoại ngữ</a></li>
                             </ul>
                         </li>
                         <li><a href="#" class="nav-link">Góc Review</a></li>
-                        <li><a href="#" class="nav-link">Chia sẻ sách</a></li>
                         <li><a href="#" class="nav-link">Liên hệ</a></li>
                     </ul>
                 </nav>
@@ -47,21 +46,43 @@
             </div>
         </div>
     </header>
-        <main class="container">
-            <section class="book-list">
-                    <img src="../../../asset/img/ngoaingu/testyourvocab1.jpg" alt="Bách khoa cuộc sống" style="float: left; width: 400px; height: 600px;">
-                    <div style="margin-block-end: 30px;">
-                        <h2>Vở bài tập Tiếng Việt 1 - Tập một</h2>
-                        <p>❤️ 0 người yêu thích 👁 355 lượt đọc</p>
-                        <p><strong>Tác giả:</strong> Tuấn Minh</p>
-                        <p><strong>Nhà xuất bản:</strong> Nhà xuất bản Lao Động 2007</p>
-                        <p><strong>Mô tả</strong></p>
-                        <p>
-                          Bộ sách “Bách khoa cuộc sống” được biên soạn thuộc thể loại bách khoa tri thức phổ thông, hướng đến việc giới thiệu kiến thức khoa học một cách đơn giản, sinh động và trực quan, phù hợp với nhiều đối tượng bạn đọc, đặc biệt là học sinh – sinh viên yêu thích khám phá khoa học.
-                          
-                      </div>
-                    </div>
+
+    <!-- Nội dung sách -->
+    <main class="container">
+        <section class="book-list">
+            <img src="../../../asset/img/ngoaingu/testyourvocab1.jpg" alt="Vocab 1" style="float: left; width: 400px; height: 600px; margin-right: 20px;">
+            <div style="margin-bottom: 30px;">
+                <h2>Vocab 1</h2>
+                <p>❤️ 1.200 người yêu thích 👁 25.000 lượt đọc</p>
+                <p><strong>Tác giả:</strong> Trần Thiên An</p>
+                <p><strong>Nhà xuất bản:</strong> NXB Ngoại Ngữ</p>
+                <p><strong>Thể loại:</strong> Ngoại ngữ, Từ vựng</p>
+                <p><strong>Số trang:</strong> 180</p>
+                <p><strong>Ngôn ngữ:</strong> Tiếng Việt</p>
+
+                <p><strong>Mô tả:</strong></p>
+                <p>
+                    _Vocab 1_ là cuốn sách tuyệt vời dành cho những người học ngoại ngữ muốn tăng cường vốn từ vựng của mình. Sách cung cấp một loạt từ vựng cơ bản và phổ biến trong cuộc sống hàng ngày, giúp bạn dễ dàng nhớ và sử dụng chúng trong giao tiếp.
+                </p>
+                <ul>
+                    <li>Học từ vựng theo chủ đề: gia đình, công việc, sở thích, du lịch, v.v.</li>
+                    <li>Phương pháp học từ vựng dễ nhớ và dễ áp dụng vào thực tế</li>
+                    <li>Các bài tập ôn tập giúp ghi nhớ từ vựng lâu dài</li>
+                    <li>Luyện tập với nhiều ví dụ cụ thể và tình huống thực tế</li>
+                </ul>
+                <p>
+                    Cuốn sách này rất phù hợp với người mới bắt đầu học ngoại ngữ cũng như những người muốn mở rộng vốn từ vựng của mình. Bạn sẽ cảm thấy tự tin hơn khi sử dụng tiếng Anh hoặc các ngoại ngữ khác trong giao tiếp.
+                </p>
+
+                <div style="margin-top: 20px;">
+                    <a href="../../../downloads/vocab1.pdf" class="btn btn-primary" download>Tải sách (PDF)</a>
+                    <button class="btn btn-outline" onclick="saveToBookshelf()">📚 Lưu vào tủ sách</button>
+                </div>
+            </div>
+        </section>
     </main>
+
+    <!-- Footer -->
     <footer>
         <div class="footer-container">
             <div class="footer-section">
@@ -83,5 +104,12 @@
         </div>
     </footer>
 
+    <script>
+        function saveToBookshelf() {
+            alert("Đã lưu sách vào tủ sách cá nhân! (Chức năng demo)");
+        }
+    </script>
+
 </body>
 </html>
+

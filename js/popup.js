@@ -9,7 +9,6 @@ document.addEventListener("DOMContentLoaded", function () {
     // Ẩn tất cả popup ban đầu
     loginModal.style.display = "none";
     registerModal.style.display = "none";
-    
 
     // Mở popup Đăng nhập
     loginBtn.addEventListener("click", function (e) {
@@ -42,39 +41,42 @@ document.addEventListener("DOMContentLoaded", function () {
             registerModal.style.display = "none";
         }
     });
-    // Hàm chuyển đổi hiển thị mật khẩu
-    function togglePassword(inputId, toggleId) {
-        const input = document.getElementById(inputId);
-        const toggleIcon = document.getElementById(toggleId);
-
-        if (input.type === "password") {
-            input.type = "text";
-            toggleIcon.classList.remove("fa-eye");
-            toggleIcon.classList.add("fa-eye-slash");
-        } else {
-            input.type = "password";
-            toggleIcon.classList.remove("fa-eye-slash");
-            toggleIcon.classList.add("fa-eye");
-        }
-        // Biểu thức regex để kiểm tra định dạng email
-        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        return emailRegex.test(email);
-    }
-        // Kiểm tra định dạng email
-        if (!isValidEmail(emailInput)) {
-            alert("Vui lòng nhập một địa chỉ email hợp lệ.");
-            return;
-        }
-
-        // Hiển thị thông báo gửi thành công
-        document.getElementById("email-success-message").style.display = "block";
-
-        // Reset input sau khi gửi thành công
-        document.getElementById("email-input").value = "";
-
-        // Tự động ẩn thông báo sau 3 giây
-        setTimeout(() => {
-            document.getElementById("email-success-message").style.display = "none";
-        }, 3000);
-
 });
+function showSuccessMessage() {
+    // Hiển thị thông báo thành công khi nút tải sách được ấn
+    document.getElementById("success-message").style.display = "block";
+
+    // Reset form sau khi tải sách thành công
+    document.getElementById("upload-form").reset();
+
+    // Tự động ẩn thông báo sau 3 giây
+    setTimeout(() => {
+        document.getElementById("success-message").style.display = "none";
+    }, 3000);
+}
+function isValidEmail(email) {
+    // Biểu thức regex để kiểm tra định dạng email
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+}
+
+function sendEmail() {
+    const emailInput = document.getElementById("email-input").value;
+
+    // Kiểm tra định dạng email
+    if (!isValidEmail(emailInput)) {
+        alert("Vui lòng nhập một địa chỉ email hợp lệ.");
+        return;
+    }
+
+    // Hiển thị thông báo gửi thành công
+    document.getElementById("email-success-message").style.display = "block";
+
+    // Reset input sau khi gửi thành công
+    document.getElementById("email-input").value = "";
+
+    // Tự động ẩn thông báo sau 3 giây
+    setTimeout(() => {
+        document.getElementById("email-success-message").style.display = "none";
+    }, 3000);
+}

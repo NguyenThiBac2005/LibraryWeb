@@ -5,7 +5,6 @@ document.addEventListener("DOMContentLoaded", function () {
     const registerBtn = document.getElementById("registerBtn");
     const closeLogin = document.getElementById("closeLogin");
     const closeRegister = document.getElementById("closeRegister");
-    const
 
     // Ẩn tất cả popup ban đầu
     loginModal.style.display = "none";

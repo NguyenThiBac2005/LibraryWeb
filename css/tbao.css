@@ -1,0 +1,7 @@
+/* Styles cho thông báo thành công */
+.success-message {
+    display: none;
+    color: green;
+    font-weight: bold;
+    margin-top: 10px;
+}

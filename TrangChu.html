@@ -274,6 +274,54 @@
 
         </div>
     </main>
+<!-- Upload Section -->
+<section  class="upload-section" id="upload" style="width:30%;height: 85%;">
+    <h2>TẢI LÊN</h2>
+    <p>Chia sẻ cuốn sách yêu thích của bạn với mọi người bằng cách tải sách lên đây nhé</p>
+      <form id="upload-form">
+
+          <label for="book-title">Tiêu đề:</label>
+          <input type="text" id="book-title" name="book-title" required>
+
+          <label for="author">Tác giả:</label>
+          <input type="text" id="author" name="author" required>
+
+          <label for="category">Loại sách:</label>
+          <select id="category" name="category" required>
+              <option value="science">Khoa học</option>
+              <option value="psy">Tâm lý</option>
+              <option value="educational">Giáo dục</option>
+              <option value="romance">Tình cảm</option>
+              <option value="technology">Công nghệ</option>
+              <option value="economy">Kinh tế</option>
+              <option value="other">Khác</option>
+          </select>
+
+          <label for="file">Tải sách lên (PDF):</label>
+          <input type="file" id="file" name="file" accept=".pdf" required>
+          <input type="button" class="btn-primary" onclick="showSuccessMessage()" value="Tải sách lên"/>
+      </form>
+      <div class="success-message" id="success-message">Tải sách thành công!</div>
+  </section>
+<!-- Contact Section -->
+<section id="contact" class="upload-section" style="width: 30%;height: 85%;">
+<h2>LIÊN HỆ </h2>
+<p>Nếu bạn có bất kỳ câu hỏi hoặc đánh giá nào hãy gửi về cho chúng tôi!</p>
+  <form action="" method="post">
+
+      <label for="name">Tên của bạn:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">Email của bạn:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="message">Lời nhắn:</label>
+      <textarea id="message" name="message" rows="5" style="padding-bottom: 50px;" required></textarea>
+
+      <input type="submit" value="Gửi lời nhắn" class="btn-primary">
+  </form>
+</section>
+</div>
 
     <footer>
         <section id="contact">

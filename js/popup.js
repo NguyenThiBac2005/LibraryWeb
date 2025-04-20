@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const registerBtn = document.getElementById("registerBtn");
     const closeLogin = document.getElementById("closeLogin");
     const closeRegister = document.getElementById("closeRegister");
-    
+    const email = document.getElementById("email");
     // Ẩn tất cả popup ban đầu
     loginModal.style.display = "none";
     registerModal.style.display = "none";
@@ -41,7 +41,7 @@ document.addEventListener("DOMContentLoaded", function () {
             registerModal.style.display = "none";
         }
     });
-});
+
 // Kiểm tra dữ liệu khi submit form
 form.addEventListener('submit', function(event) {
     event.preventDefault();
@@ -87,3 +87,4 @@ function validateEmail(email) {
     const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return re.test(email);
 }
+});

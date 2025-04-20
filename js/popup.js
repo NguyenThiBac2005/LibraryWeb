@@ -99,7 +99,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const saveNotification = document.getElementById('save-notification');
     
     // Thêm sự kiện cho nút tải xuống
-    window.downloadNotification= function() {
+    window.download = function() {
       // Hiển thị thông báo tải xuống thành công
       downloadNotification.classList.add('show');
       alert('Tải sách thành công!'); 
@@ -123,6 +123,6 @@ document.addEventListener('DOMContentLoaded', function() {
       setTimeout(function() {
         saveNotification.classList.remove('show');
       }, 3000);
-      
+
     };
 });

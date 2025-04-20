@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sách của tôi - BookHub</title>
+    <link rel="stylesheet" href="../TrangChu.css">
+    <link rel="stylesheet" href="../css/upload.css">
+    <script src="../js/upload.js"></script>
+</head>
+<body>
+    <!-- Header Section - giống TrangChu.html -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <a href="../TrangChu.html" class="nav-link" data-page="home">
+                    <img src="../asset/img/anh-logo.png" alt="BookHub Logo"> 
+                    <h1 class="page-title">BookHub</h1>
+                    </a>
+                </div>
+                
+                <div class="search-bar">
+                    <input type="text" placeholder="Tìm kiếm sách, tác giả, thể loại...">
+                    <button>Tìm</button>
+                </div>
+                
+                <nav>
+                    <ul>
+                        <li><a href="../TrangChu.html" class="nav-link" data-page="home">Trang chủ</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="nav-link" data-page="books">Danh mục sách</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="../html/vanhoc/vanhoc.html">Văn học</a></li>
+                                <li><a href="../html/khoahoc/khoahoc.html">Khoa học</a></li>
+                                <li><a href="../html/kinhte/kinhte.html">Kinh tế</a></li>
+                                <li><a href="../html/tamlihoc/tamlihoc.html">Tâm lý học</a></li>
+                                <li><a href="../html/ngoaingu/ngoaingu.html">Ngoại ngữ</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="../TrangChu.html#reviews" class="nav-link" data-page="reviews">Góc Review</a></li>
+                        <li><a href="../TrangChu.html#contact" class="nav-link" data-page="contact">Liên hệ</a></li>
+                        <li><a href="my-books.html" class="nav-link active" data-page="my-books">Sách của tôi</a></li>
+                    </ul>
+                </nav>
+                
+                <div class="user-actions">
+                    <a href="#" id="loginBtn" class="btn btn-primary">Đăng nhập</a>
+                    <a href="#" id="registerBtn" class="btn btn-outline">Đăng ký</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <div class="container">
+            <!-- My Books Section -->
+            <section class="my-books-section">
+                <div class="my-books-header">
+                    <h2>Sách của tôi</h2>
+                    <a href="../TrangChu.html#upload" class="btn btn-primary">Tải sách mới</a>
+                </div>
+                
+                <div class="my-books-container">
+                    <!-- Nội dung sẽ được thêm bằng JavaScript -->
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>Liên hệ</h3>
+                <p>Email: support@bookhub.com</p>
+                <p>Điện thoại: +84 123 456 789</p>
+            </div>
+            <div class="footer-section">
+                <h3>Địa chỉ</h3>
+                <p>79 Hồ Tùng Mậu, Mai Dịch, Cầu Giấy, Hà Nội</p>
+            </div>
+            <div class="footer-section">
+                <h3>Theo dõi chúng tôi</h3>
+                <a href="#">Facebook</a> | <a href="#">Twitter</a> | <a href="#">Instagram</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; Nhóm 19 BookHub. Tất cả các quyền được bảo lưu.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Hiển thị sách đã tải lên
+            const myBooksContainer = document.querySelector('.my-books-container');
+            if (myBooksContainer) {
+                displayUploadedBooks(myBooksContainer);
+            }
+        });
+    </script>
+</body>
+</html>

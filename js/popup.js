@@ -97,18 +97,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const saveButton = document.querySelector('button.btn-outline');
     const downloadNotification = document.getElementById('download-notification');
     const saveNotification = document.getElementById('save-notification');
-    
-    // Thêm sự kiện cho nút tải xuống
-    window.download = function() {
-      // Hiển thị thông báo tải xuống thành công
-      downloadNotification.classList.add('show');
-      alert('Tải sách thành công!'); 
-      // Tự động ẩn thông báo sau 3 giây
-      setTimeout(function() {
-        downloadNotification.classList.remove('show');
-      }, 3000);
-    };
-    
+
     // Định nghĩa hàm saveToBookshelf() cho nút lưu vào tủ sách
     window.saveToBookshelf = function() {
       // Hiển thị thông báo lưu thành công

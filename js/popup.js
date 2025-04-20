@@ -99,7 +99,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const saveNotification = document.getElementById('save-notification');
     
     // Thêm sự kiện cho nút tải xuống
-    downloadButton.addEventListener('click', function() {
+    window.downloadNotification= function() {
       // Hiển thị thông báo tải xuống thành công
       downloadNotification.classList.add('show');
       alert('Tải sách thành công!'); 
@@ -107,7 +107,7 @@ document.addEventListener('DOMContentLoaded', function() {
       setTimeout(function() {
         downloadNotification.classList.remove('show');
       }, 3000);
-    });
+    };
     
     // Định nghĩa hàm saveToBookshelf() cho nút lưu vào tủ sách
     window.saveToBookshelf = function() {
@@ -123,6 +123,6 @@ document.addEventListener('DOMContentLoaded', function() {
       setTimeout(function() {
         saveNotification.classList.remove('show');
       }, 3000);
-    
+      
     };
-  });
+});

@@ -113,6 +113,7 @@ document.addEventListener('DOMContentLoaded', function() {
     window.saveToBookshelf = function() {
       // Hiển thị thông báo lưu thành công
       saveNotification.classList.add('show');
+      alert('Tải sách thành công!');
       
       // Thay đổi văn bản nút sau khi lưu
       saveButton.innerHTML = '✓ Đã lưu vào tủ sách';

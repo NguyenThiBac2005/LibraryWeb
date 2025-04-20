@@ -6,7 +6,9 @@
     <title>BookHub - Nền tảng chia sẻ sách và tài liệu</title>
     <link rel="stylesheet" href="TrangChu.css">
     <link rel="stylesheet" href="./css/auth.css">
+    <link rel="stylesheet" href="./css/upload.css">
     <script src="./js/popup.js"></script>
+    <script src="./js/upload.js"></script>
 </head>
 <body>
      <!-- Thanh menu điều hướng -->
@@ -47,6 +49,7 @@
                         </li>
                         <li><a href="#reviews" class="nav-link" data-page="reviews">Góc Review</a></li>
                         <li><a href="#contact" class="nav-link" data-page="contact">Liên hệ</a></li>
+                        <li><a href="./html/my-books.html" class="nav-link" data-page="my-books">Sách của tôi</a></li>
                     </ul>
                 </nav>
                 
@@ -275,34 +278,35 @@
         </div>
     </main>
 <!-- Upload Section -->
-<section  class="upload-section" id="upload" style="width:30%;height: 85%;">
+<section class="upload-section" id="upload" style="width:30%;height: 85%;">
     <h2>TẢI LÊN</h2>
     <p>Chia sẻ cuốn sách yêu thích của bạn với mọi người bằng cách tải sách lên đây nhé</p>
-      <form id="upload-form">
+    <form id="upload-form">
+        <label for="book-title">Tiêu đề:</label>
+        <input type="text" id="book-title" name="book-title" required>
 
-          <label for="book-title">Tiêu đề:</label>
-          <input type="text" id="book-title" name="book-title" required>
+        <label for="author">Tác giả:</label>
+        <input type="text" id="author" name="author" required>
 
-          <label for="author">Tác giả:</label>
-          <input type="text" id="author" name="author" required>
+        <label for="category">Loại sách:</label>
+        <select id="category" name="category" required>
+            <option value="science">Khoa học</option>
+            <option value="psy">Tâm lý</option>
+            <option value="educational">Giáo dục</option>
+            <option value="romance">Tình cảm</option>
+            <option value="technology">Công nghệ</option>
+            <option value="economy">Kinh tế</option>
+            <option value="other">Khác</option>
+        </select>
 
-          <label for="category">Loại sách:</label>
-          <select id="category" name="category" required>
-              <option value="science">Khoa học</option>
-              <option value="psy">Tâm lý</option>
-              <option value="educational">Giáo dục</option>
-              <option value="romance">Tình cảm</option>
-              <option value="technology">Công nghệ</option>
-              <option value="economy">Kinh tế</option>
-              <option value="other">Khác</option>
-          </select>
-
-          <label for="file">Tải sách lên (PDF):</label>
-          <input type="file" id="file" name="file" accept=".pdf" required>
-          <input type="button" class="btn-primary" onclick="showSuccessMessage()" value="Tải sách lên"/>
-      </form>
-      <div class="success-message" id="success-message">Tải sách thành công!</div>
-  </section>
+        <label for="file">Tải sách lên (PDF):</label>
+        <input type="file" id="file" name="file" accept=".pdf" required>
+        
+        <!-- Thay đổi button thành type="submit" để form có thể được xử lý bởi JavaScript -->
+        <button type="submit" class="btn-primary">Tải sách lên</button>
+    </form>
+    <div class="success-message" id="success-message">Tải sách thành công!</div>
+</section>
 <!-- Contact Section -->
 <section id="contact" class="upload-section" style="width: 30%;height: 85%;">
 <h2>LIÊN HỆ </h2>

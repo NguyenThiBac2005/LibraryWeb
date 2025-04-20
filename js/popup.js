@@ -88,3 +88,41 @@ function validateEmail(email) {
     return re.test(email);
 }
 });
+ 
+// Hiển thị thông báo tải xuống thành công
+// Đợi cho tài liệu HTML được tải hoàn toàn
+document.addEventListener('DOMContentLoaded', function() {
+    // Lấy các phần tử cần thiết
+    const downloadButton = document.querySelector('a.btn-primary');
+    const saveButton = document.querySelector('button.btn-outline');
+    const downloadNotification = document.getElementById('download-notification');
+    const saveNotification = document.getElementById('save-notification');
+    
+    // Thêm sự kiện cho nút tải xuống
+    downloadButton.addEventListener('click', function() {
+      // Hiển thị thông báo tải xuống thành công
+      downloadNotification.classList.add('show');
+      
+      // Tự động ẩn thông báo sau 3 giây
+      setTimeout(function() {
+        downloadNotification.classList.remove('show');
+      }, 3000);
+    });
+    
+    // Định nghĩa hàm saveToBookshelf() cho nút lưu vào tủ sách
+    window.saveToBookshelf = function() {
+      // Hiển thị thông báo lưu thành công
+      saveNotification.classList.add('show');
+      
+      // Thay đổi văn bản nút sau khi lưu
+      saveButton.innerHTML = '✓ Đã lưu vào tủ sách';
+      saveButton.disabled = true;
+      saveButton.style.backgroundColor = '#e8f5e9';
+      
+      // Tự động ẩn thông báo sau 3 giây
+      setTimeout(function() {
+        saveNotification.classList.remove('show');
+      }, 3000);
+    
+    };
+  });

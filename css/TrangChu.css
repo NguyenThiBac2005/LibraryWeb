@@ -1,0 +1,26 @@
+/* Tạo container chứa logo và tên trang */
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 0;
+  }
+  
+  /* Định dạng logo */
+  #logo {
+    margin-right: 10px; /* Khoảng cách giữa logo và tên trang */
+  }
+  
+  /* Định dạng tên trang */
+  .page-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0;
+  }
+  
+  /* Nếu muốn container căn giữa trong header */
+  header {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }

@@ -102,7 +102,7 @@ document.addEventListener('DOMContentLoaded', function() {
     downloadButton.addEventListener('click', function() {
       // Hiển thị thông báo tải xuống thành công
       downloadNotification.classList.add('show');
-      
+      alert('Tải sách thành công!'); 
       // Tự động ẩn thông báo sau 3 giây
       setTimeout(function() {
         downloadNotification.classList.remove('show');
@@ -113,8 +113,7 @@ document.addEventListener('DOMContentLoaded', function() {
     window.saveToBookshelf = function() {
       // Hiển thị thông báo lưu thành công
       saveNotification.classList.add('show');
-      alert('Tải sách thành công!');
-      
+      alert('Đã lưu vào tủ sách!'); 
       // Thay đổi văn bản nút sau khi lưu
       saveButton.innerHTML = '✓ Đã lưu vào tủ sách';
       saveButton.disabled = true;

@@ -1,7 +1,7 @@
 // Đợi cho đến khi tài liệu HTML được tải hoàn toàn
 document.addEventListener('DOMContentLoaded', function() {
     // Tìm logo bằng ID (thay 'logo' bằng ID thực tế của logo trên trang của bạn)
-    const logo = document.getElementById('logo');
+    const logo = document.querySelector('.logo');
     
     // Kiểm tra xem logo có tồn tại không
     if (logo) {
@@ -18,8 +18,5 @@ document.addEventListener('DOMContentLoaded', function() {
         logo.title = 'Về trang chủ';
     } else {
         console.error('Không tìm thấy phần tử logo');
-    }
-    
-    // Phương pháp thay thế: Tìm logo bằng class nếu bạn không sử dụng ID
-    // const logo = document.querySelector('.logo-class'); // Thay '.logo-class' bằng class thực tế
+    }  
 });

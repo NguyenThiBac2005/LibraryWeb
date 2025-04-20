@@ -20,7 +20,7 @@
   
   /* Nếu muốn container căn giữa trong header */
   header {
-    display: flex;
+    display: flex-start;
     justify-content: center;
     width: 100%;
   }

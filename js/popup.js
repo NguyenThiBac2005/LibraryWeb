@@ -7,6 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const closeRegister = document.getElementById("closeRegister");
     const email = document.getElementById("email");
     const upload = document.getElementById("upload");
+    const uploadform = document.getElementById("upload-form");
     const btnupload = document.getElementById("btnupload");
     const closeupload = document.getElementById("closeupload");
     // Ẩn tất cả popup ban đầu

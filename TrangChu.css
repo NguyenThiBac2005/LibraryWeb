@@ -439,9 +439,118 @@ main {
 .download-count i {
     margin-right: 5px;
     color: var(--primary-color);
+    
+}
+.interactive-rating {
+  width: 300px;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  font-family: Arial, sans-serif;
+}
+
+.interactive-rating h3 {
+  margin-top: 0;
+  font-size: 18px;
+  color: #333;
+}
+
+.stars {
+  display: flex;
+  gap: 5px;
+  margin: 10px 0;
+}
+
+.star {
+  font-size: 25px;
+  color: #ccc;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.star.selected,
+.star:hover,
+.star:hover ~ .star {
+  color: #FFD700;
+}
+
+#ratingValue {
+  font-size: 14px;
+  color: #666;
 }
 
 /* Reviews Section */
+.review-section {
+    margin: 40px;
+    text-align: center;
+  }
+  
+  .review-carousel {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .review-list {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+  }
+  
+  .review-card {
+    flex: 0 0 250px;
+    margin: 10px;
+    padding: 15px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  }
+  
+  .scroll-btn {
+    position: absolute;
+    top: 40%;
+    background-color: white;
+    color: white;
+    border: none;
+    font-size: 18px;
+    padding: 8px 12px;
+    cursor: pointer;
+    z-index: 1;
+  }
+  
+  .scroll-btn.left {
+    left: 0;
+  }
+  
+  .scroll-btn.right {
+    right: 0;
+  }
+  
+  .review-form {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .review-form input, .review-form textarea {
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+  }
+  
+  .review-form button {
+    background-color: #007BFF;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  
 .review-slider {
     position: relative;
     overflow: hidden; /* Ẩn các review vượt quá vùng hiển thị */

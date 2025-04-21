@@ -39,3 +39,11 @@ document.addEventListener("DOMContentLoaded", function () {
     // Khởi tạo slider
     updateSlider();
 });
+document.querySelector('.scroll-btn.left').addEventListener('click', () => {
+    document.querySelector('.review-list').scrollBy({ left: -300, behavior: 'smooth' });
+  });
+  
+  document.querySelector('.scroll-btn.right').addEventListener('click', () => {
+    document.querySelector('.review-list').scrollBy({ left: 300, behavior: 'smooth' });
+  });
+  

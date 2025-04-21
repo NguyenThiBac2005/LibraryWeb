@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chiến lược kiến trúc kinh doanh - BookHub</title>
+    <link rel="stylesheet" href="../../../TrangChu.css">
+    <link rel="stylesheet" href="../../../css/danhmucsach.css">
+    <link rel="stylesheet" href="../../../css/auth.css">
+    <script src="../../../js/popup.js"></script>
+    <link rel ="icon" href="../../../asset/img/anh-logo.png" type="image/x-icon">
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <a href="../../../TrangChu.html" class="nav-link" data-page="home">
+                     
+                        <h1 class="page-title">BookHub</h1>
+                        </a>
+                </div>
+                <div class="search-bar">
+                    <input type="text" placeholder="Tìm kiếm sách, tác giả, thể loại...">
+                    <button>Tìm</button>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="../../../TrangChu.html" class="nav-link">Trang chủ</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="nav-link">Danh mục sách</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="../../vanhoc/vanhoc.html">Văn học</a></li>
+                                <li><a href="../../khoahoc/khoahoc.html">Khoa học</a></li>
+                                <li><a href="../../kinhte/kinhte.html">Kinh tế</a></li>
+                                <li><a href="../../tamlihoc/tamlihoc.html">Tâm lý học</a></li>
+                                <li><a href="../../ngoaingu/ngoaingu.html">Ngoại ngữ</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#" class="nav-link">Góc Review</a></li>
+                        <li><a href="#" class="nav-link">Liên hệ</a></li>
+                    </ul>
+                </nav>
+                <div class="user-actions">
+                    <a href="#" class="btn btn-primary">Đăng nhập</a>
+                    <a href="#" class="btn btn-outline">Đăng ký</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Nội dung sách -->
+    <main class="container">
+        <section class="book-list">
+            <img src="../../../asset/img/kinhte/chienluocdautuchungkhoan.jpg" alt="Chiến Lược Đầu Tư Chứng Khoán" style="float: left; width: 400px; height: 600px; margin-right: 20px;">
+            <div style="margin-bottom: 30px;">
+                <h2>Chiến lược đầu tư chứng khoán</h2>
+                <p>❤️ 227 người yêu thích 📥 5215 lượt tải</p>
+                <p><strong>Tác giả:</strong> David Brown, Kassandra Bentley</p>
+                <p><strong>Nhà xuất bản:</strong> Nhà xuất bản Lao Động</p>
+                <p><strong>Mô tả</strong></p>
+                <p>
+                    Những điều cần biết về Chiến Lược Đầu Tư Chứng Khoán sẽ giúp bạn trở thành một nhà đầu tư tự tin hơn và thành công hơn trên thị trường chứng khoán. Nội dung cuốn sách Kinh doanh là những điều tra và phân tích đơn giản dễ hiểu về các phong cách đầu tư phổ biến nhất hiện nay, nó giải thích những đặc trưng của các loại cổ phiếu đại diện cho từng xu hướng, các chiến lược để tìm kiếm cơ hội và đầu tư vào những loại cổ phiếu tốt nhất, các lời khuyên giúp bạn chọn được cho mình hướng đầu tư tốt nhất trong các thị trường khác nhau và nhiều hơn thế.
+
+                    Các biểu đồ PQ sẽ giúp bạn quyết định được cách thức đầu tư nào là phù hợp nhất với bạn, trong khi những mô tả về các chiến lược nhỏ sẽ giúp bạn chọn lọc và biến các chiến lược đó trở thành chiến lược đầu tư của riêng mình. Dù bạn khám phá ra bạn phù hợp nhất với chiến lược đầu tư dài hạn, thận trọng hay bạn chọn theo đuổi chiến lược đầu tư ngắn hạn, ồ ạt, thì đây chính là cuốn sách bạn cần để hiểu rõ đầu vào và đầu ra của từng loại hình đầu tư – và chắc chắn sự nghiệp đầu tư của bạn sẽ bền vững và bội thu.
+                </p>
+                <div style="margin-top: 20px;">
+                    <a href="../../../downloads/chienluocdautuchungkhoan.pdf" class="btn btn-primary" download>Tải sách (PDF)</a>
+                    <button class="btn btn-outline" onclick="saveToBookshelf()">📚 Lưu vào tủ sách</button>
+                    <div id="save-notification" class="notification"></div>
+                </div>
+                
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>Liên hệ</h3>
+                <p>Email: support@bookhub.com</p>
+                <p>Điện thoại: +84 123 456 789</p>
+            </div>
+            <div class="footer-section">
+                <h3>Địa chỉ</h3>
+                <a href="https://maps.app.goo.gl/Fi8rXrmFda9V4szh7" target="blank"> 79 Hồ Tùng Mậu, Mai Dịch, Cầu Giấy, Hà Nội </a>
+            </div>
+            <div class="footer-section">
+                <h3>Theo dõi chúng tôi</h3>
+                <a href="#">Facebook</a> | <a href="#">Twitter</a> | <a href="#">Instagram</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; Nhóm 19 BookHub. Tất cả các quyền được bảo lưu.</p>
+        </div>
+    </footer>
+
+    <script>
+        function saveToBookshelf() {
+            alert("Đã lưu sách vào tủ sách cá nhân! (Chức năng demo)");
+        }
+    </script>
+
+</body>
+</html>
+

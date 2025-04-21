@@ -6,10 +6,8 @@ document.addEventListener("DOMContentLoaded", function () {
     const closeLogin = document.getElementById("closeLogin");
     const closeRegister = document.getElementById("closeRegister");
     const email = document.getElementById("email");
-    const upload = document.getElementById("upload");
-    const uploadform = document.getElementById("upload-form");
-    const btnupload = document.getElementById("btnupload");
-    const closeupload = document.getElementById("closeupload");
+    const uploadModal = document.getElementById('upload');
+    const closeUpload = document.getElementById('closeupload');
     // Ẩn tất cả popup ban đầu
     loginModal.style.display = "none";
     registerModal.style.display = "none";
@@ -27,10 +25,7 @@ document.addEventListener("DOMContentLoaded", function () {
         registerModal.style.display = "flex";
     });
 
-    // Mở popup Tải sách lên
-    btnupload.addEventListener("click", function (e) {
-        e.preventDefault(); // Ngăn chặn hành vi mặc định của thẻ <a>
-        uploadform.style.display = "flex";
+
     });
     // Đóng popup Đăng nhập
     closeLogin.addEventListener("click", function () {
@@ -42,10 +37,7 @@ document.addEventListener("DOMContentLoaded", function () {
         registerModal.style.display = "none";
     });
 
-    // Đóng popup Tải sách lên
-    closeupload.addEventListener("click", function () {
-        uploadform.style.display = "none";
-    });
+
 
     // Đóng popup khi nhấn ngoài modal
     window.addEventListener("click", function (event) {
@@ -55,11 +47,45 @@ document.addEventListener("DOMContentLoaded", function () {
         if (event.target === registerModal) {
             registerModal.style.display = "none";
         }
-        if (event.target === upload) {
-            upload.style.display = "none";
-        }
+
+    });
+
+    // Lấy các nút kích hoạt modal
+    const uploadLinks = document.querySelectorAll('[href="#upload"], [data-page="upload"]');
+
+    // Thêm sự kiện click cho tất cả các liên kết tải lên
+    uploadLinks.forEach(function(link) {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            uploadModal.style.display = 'block';
+        });
     });
     
+  // Đóng modal khi nhấp vào bên ngoài modal
+  window.addEventListener('click', function(event) {
+    if (event.target === uploadModal) {
+        uploadModal.style.display = 'none';
+    }
+    });
+
+    // Xử lý form tải lên
+    const uploadForm = document.getElementById('upload-form');
+    if (uploadForm) {
+        uploadForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Hiển thị thông báo thành công
+            document.getElementById('success-message').style.display = 'block';
+            
+            // Ẩn thông báo sau 3 giây
+            setTimeout(function() {
+                document.getElementById('success-message').style.display = 'none';
+                uploadModal.style.display = 'none';
+                // Reset form
+                uploadForm.reset();
+            }, 3000);
+        });
+    }
 
     // Kiểm tra dữ liệu khi submit form
      form.addEventListener('submit', function(event) {
@@ -96,7 +122,7 @@ function validateEmail(email) {
     const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return re.test(email);
 }
-});
+
  
 // Hiển thị thông báo tải xuống thành công
 // Đợi cho tài liệu HTML được tải hoàn toàn

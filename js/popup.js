@@ -6,8 +6,9 @@ document.addEventListener("DOMContentLoaded", function () {
     const closeLogin = document.getElementById("closeLogin");
     const closeRegister = document.getElementById("closeRegister");
     const email = document.getElementById("email");
-    const uploadModal = document.getElementById('upload');
-    const closeUpload = document.getElementById('closeupload');
+    const uploadModal = document.getElementById("upload");
+    const closeUpload = document.getElementById("closeupload");
+    
     // Ẩn tất cả popup ban đầu
     loginModal.style.display = "none";
     registerModal.style.display = "none";

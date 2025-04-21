@@ -6,9 +6,13 @@ document.addEventListener("DOMContentLoaded", function () {
     const closeLogin = document.getElementById("closeLogin");
     const closeRegister = document.getElementById("closeRegister");
     const email = document.getElementById("email");
+    const upload = document.getElementById("upload");
+    const btnupload = document.getElementById("btnupload");
+    const closeupload = document.getElementById("closeupload");
     // Ẩn tất cả popup ban đầu
     loginModal.style.display = "none";
     registerModal.style.display = "none";
+    upload.style.display = "none";
 
     // Mở popup Đăng nhập
     loginBtn.addEventListener("click", function (e) {
@@ -22,6 +26,11 @@ document.addEventListener("DOMContentLoaded", function () {
         registerModal.style.display = "flex";
     });
 
+    // Mở popup Tải sách lên
+    btnupload.addEventListener("click", function (e) {
+        e.preventDefault(); // Ngăn chặn hành vi mặc định của thẻ <a>
+        upload.style.display = "flex";
+    });
     // Đóng popup Đăng nhập
     closeLogin.addEventListener("click", function () {
         loginModal.style.display = "none";
@@ -32,6 +41,11 @@ document.addEventListener("DOMContentLoaded", function () {
         registerModal.style.display = "none";
     });
 
+    // Đóng popup Tải sách lên
+    closeupload.addEventListener("click", function () {
+        upload.style.display = "none";
+    });
+
     // Đóng popup khi nhấn ngoài modal
     window.addEventListener("click", function (event) {
         if (event.target === loginModal) {
@@ -40,7 +54,11 @@ document.addEventListener("DOMContentLoaded", function () {
         if (event.target === registerModal) {
             registerModal.style.display = "none";
         }
+        if (event.target === upload) {
+            upload.style.display = "none";
+        }
     });
+    
 
     // Kiểm tra dữ liệu khi submit form
      form.addEventListener('submit', function(event) {
@@ -53,13 +71,7 @@ document.addEventListener("DOMContentLoaded", function () {
     if (username === '') {
         errors.push('Vui lòng nhập tên đăng nhập');
     }
-    
-    // Kiểm tra mật khẩu
-    if (password === '') {
-        errors.push('Vui lòng nhập mật khẩu');
-    } else if (password.length < 6) {
-        errors.push('Mật khẩu phải có ít nhất 6 ký tự');
-    }
+
     
     // Kiểm tra email
     if (email === '') {

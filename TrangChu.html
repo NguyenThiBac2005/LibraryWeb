@@ -278,7 +278,9 @@
         </div>
     </main>
 <!-- Upload Section -->
-<section class="upload-section" id="upload" style="width:30%;height: 85%;">
+<div id="upload" class="modal">
+    <div class="modal-content">
+        <span class="close" id="closeupload">&times;</span>
     <h2>TẢI LÊN</h2>
     <p>Chia sẻ cuốn sách yêu thích của bạn với mọi người bằng cách tải sách lên đây nhé</p>
     <form id="upload-form">
@@ -301,6 +303,9 @@
 
         <label for="file">Tải sách lên (PDF):</label>
         <input type="file" id="file" name="file" accept=".pdf" required>
+        <div class="user-actions">
+            <a href="#" id="btnupload" class="btn btn-primary">Tải sách lên</a>
+        </div>
         
         <!-- Thay đổi button thành type="submit" để form có thể được xử lý bởi JavaScript -->
         <button type="submit" class="btn-primary">Tải sách lên</button>

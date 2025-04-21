@@ -42,17 +42,13 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
-// Kiểm tra dữ liệu khi submit form
-form.addEventListener('submit', function(event) {
-    event.preventDefault();
+    // Kiểm tra dữ liệu khi submit form
+     form.addEventListener('submit', function(event) {
+     event.preventDefault();
     
-    // Mảng chứa các lỗi nếu có
-    const errors = [];
-    
-    // Kiểm tra tên
-    if (name === '') {
-        errors.push('Vui lòng nhập tên của bạn');
-    }   
+     // Mảng chứa các lỗi nếu có
+     const errors = [];
+ 
     // Kiểm tra tên đăng nhập
     if (username === '') {
         errors.push('Vui lòng nhập tên đăng nhập');

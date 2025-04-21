@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const closeRegister = document.getElementById("closeRegister");
     const email = document.getElementById("email");
     const uploadModal = document.getElementById("upload");
-    const closeUpload = document.getElementById("closeupload");
+    const closeupload = document.getElementById("closeupload");
     
     // Ẩn tất cả popup ban đầu
     loginModal.style.display = "none";
@@ -26,21 +26,24 @@ document.addEventListener("DOMContentLoaded", function () {
         registerModal.style.display = "flex";
     });
 
-
-    });
-    // Đóng popup Đăng nhập
+// Đóng popup Đăng nhập
     closeLogin.addEventListener("click", function () {
-        loginModal.style.display = "none";
+     loginModal.style.display = "none";
     });
 
+    
     // Đóng popup Đăng ký
     closeRegister.addEventListener("click", function () {
         registerModal.style.display = "none";
     });
 
+    // Đóng popup Tải sách lên
+    closeupload.addEventListener("click", function () {
+        uploadModal.style.display = "none";
+    });
 
 
-    // Đóng popup khi nhấn ngoài modal
+// Đóng popup khi nhấn ngoài modal
     window.addEventListener("click", function (event) {
         if (event.target === loginModal) {
             loginModal.style.display = "none";
@@ -118,24 +121,22 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 });
 
-// Hàm kiểm tra email hợp lệ
-function validateEmail(email) {
-    const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return re.test(email);
-}
+    // Hàm kiểm tra email hợp lệ
+      function validateEmail(email) {
+      const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      return re.test(email);
+ }
 
  
-// Hiển thị thông báo tải xuống thành công
-// Đợi cho tài liệu HTML được tải hoàn toàn
-document.addEventListener('DOMContentLoaded', function() {
+    // Hiển thị thông báo tải xuống thành công
+    // Đợi cho tài liệu HTML được tải hoàn toàn
+      document.addEventListener('DOMContentLoaded', function() {
     // Lấy các phần tử cần thiết
-    const downloadButton = document.querySelector('a.btn-primary');
-    const saveButton = document.querySelector('button.btn-outline');
-    const downloadNotification = document.getElementById('download-notification');
-    const saveNotification = document.getElementById('save-notification');
+      const saveButton = document.querySelector('button.btn-outline');
+      const saveNotification = document.getElementById('save-notification');
 
     // Định nghĩa hàm saveToBookshelf() cho nút lưu vào tủ sách
-    window.saveToBookshelf = function() {
+     window.saveToBookshelf = function() {
       // Hiển thị thông báo lưu thành công
       saveNotification.classList.add('show');
       alert('Đã lưu vào tủ sách!'); 
@@ -151,3 +152,5 @@ document.addEventListener('DOMContentLoaded', function() {
 
     };
 });
+});
+    

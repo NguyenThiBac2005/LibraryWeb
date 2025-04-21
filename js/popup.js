@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // Mở popup Tải sách lên
     btnupload.addEventListener("click", function (e) {
         e.preventDefault(); // Ngăn chặn hành vi mặc định của thẻ <a>
-        upload.style.display = "flex";
+        uploadform.style.display = "flex";
     });
     // Đóng popup Đăng nhập
     closeLogin.addEventListener("click", function () {
@@ -44,7 +44,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Đóng popup Tải sách lên
     closeupload.addEventListener("click", function () {
-        upload.style.display = "none";
+        uploadform.style.display = "none";
     });
 
     // Đóng popup khi nhấn ngoài modal

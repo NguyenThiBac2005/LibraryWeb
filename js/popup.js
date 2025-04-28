@@ -127,25 +127,23 @@ document.addEventListener("DOMContentLoaded", function () {
       return re.test(email);
  }
 
- 
-    // Hiển thị thông báo tải xuống thành công
-    // Đợi cho tài liệu HTML được tải hoàn toàn
+// Hiển thị thông báo tải xuống thành công
+// Đợi cho tài liệu HTML được tải hoàn toàn
       document.addEventListener('DOMContentLoaded', function() {
-    // Lấy các phần tử cần thiết
+// Lấy các phần tử cần thiết
       const saveButton = document.querySelector('button.btn-outline');
       const saveNotification = document.getElementById('save-notification');
-
-    // Định nghĩa hàm saveToBookshelf() cho nút lưu vào tủ sách
+ // Định nghĩa hàm saveToBookshelf() cho nút lưu vào tủ sách
      window.saveToBookshelf = function() {
-      // Hiển thị thông báo lưu thành công
+// Hiển thị thông báo lưu thành công
       saveNotification.classList.add('show');
       alert('Đã lưu vào tủ sách!'); 
-      // Thay đổi văn bản nút sau khi lưu
+ // Thay đổi văn bản nút sau khi lưu
       saveButton.innerHTML = '✓ Đã lưu vào tủ sách';
       saveButton.disabled = true;
       saveButton.style.backgroundColor = '#e8f5e9';
       
-      // Tự động ẩn thông báo sau 3 giây
+ // Tự động ẩn thông báo sau 3 giây
       setTimeout(function() {
         saveNotification.classList.remove('show');
       }, 3000);

@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookHub - Nền tảng chia sẻ sách và tài liệu</title>
+    <link rel="stylesheet" href="TrangChu.css">
+    <link rel="stylesheet" href="./css/auth.css">
+    <link rel="stylesheet" href="./css/upload.css">
+    <link rel="stylesheet" href="./css/homthugopy.css">
+    <script src="./js/popup.js"></script>
+    <script src="./js/upload.js"></script>
+    <script src="./js/homthugopy.js"></script>
+    <link rel ="icon" href="./asset/img/anh-logo.png" type="image/x-icon">
+    
+</head>
+<body>
+     <!-- Thanh menu điều hướng -->
+     <nav class="navbar">
+        <ul>
+            <li><a href="#reviews"></a></li>
+            <li><a href="#contact"></a></li>
+            <li><a href="#upload"></a></li>
+        </ul>
+    </nav>    
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <a href="./TrangChu.html" class="nav-link" data-page="home">
+                    <h1 class="page-title">BookHub</h1>
+                    </a>
+                </div>
+                
+                <div class="search-bar">
+                    <input type="text" placeholder="Tìm kiếm sách, tác giả, thể loại...">
+                    <button>Tìm</button>
+                </div>
+                
+                <nav>
+                    <ul>
+                        <li><a href="./TrangChu.html" class="nav-link" data-page="home">Trang chủ</a></li>
+                        <li class="dropdown">
+                            <a href="#Danh mục sách" class="nav-link" data-page="books">Danh mục sách</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="./html/vanhoc/vanhoc.html">Văn học</a></li>
+                                <li><a href="./html/khoahoc/khoahoc.html">Khoa học</a></li>
+                                <li><a href="./html/kinhte/kinhte.html">Kinh tế</a></li>
+                                <li><a href="./html/tamlihoc/tamlihoc.html">Tâm lý học</a></li>
+                                <li><a href="./html/ngoaingu/ngoaingu.html">Ngoại ngữ</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#reviews" class="nav-link" data-page="reviews">Góc Review</a></li>
+                        <li><a href="#upload" class="nav-link" data-page="upload">Tải sách lên</a></li>
+                        <li><a href="#contact" class="nav-link" data-page="contact">Liên hệ</a></li>
+                    </ul>
+                </nav>
+                
+                <!-- Popup Đăng nhập -->
+                <div id="loginModal" class="modal">
+                    <div class="modal-content">
+                        <span class="close" id="closeLogin">&times;</span>
+                        <h2>Đăng nhập</h2>
+                        <form>
+                            <label for="username">Tên đăng nhập:</label>
+                            <input type="text" id="username" class="input-field" name="username" required>
+                            <label for="password">Mật khẩu:</label>
+                            <input type="password" id="password" class="input-field" name="password" required>
+                            <button type="submit" class="btn btn-primary">Đăng nhập</button>
+                        </form>
+                        <div id="login-notification" class="notification"></div>
+                    </div>
+                </div>
+
+                <!-- Popup Đăng ký -->
+                <div id="registerModal" class="modal">
+                    <div class="modal-content">
+                        <span class="close" id="closeRegister">&times;</span>
+                        <h2>Đăng ký</h2>
+                        <form>
+                            <label for="newUsername">Tên đăng nhập:</label>
+                            <input type="text" id="newUsername" class="input-field" name="newUsername" required>
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" class="input-field" name="email" required>
+                            <label for="newPassword">Mật khẩu:</label>
+                            <input type="password" id="newPassword" class="input-field" name="newPassword" required>
+                            <button type="submit" class="btn btn-primary">Đăng ký</button>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="user-actions">
+                    <a href="#" id="loginBtn" class="btn btn-primary">Đăng nhập</a>
+                    <a href="#" id="registerBtn" class="btn btn-outline">Đăng ký</a>
+                </div>
+
+                
+            </div>
+        </div>
+    </header>
+
+
+    <!-- Main Content -->
+    <main>
+        <div class="container">
+            <!-- Home Page Content -->
+            <section id="home-page">
+                <!-- Hero Section -->
+                <div class="hero">
+                    <h2>Khám phá kho tàng tri thức không giới hạn</h2>
+                    <p>Hàng ngàn đầu sách và tài liệu chất lượng cao có sẵn để tải về miễn phí. Chia sẻ và khám phá cùng cộng đồng yêu sách.</p>
+                    <a href="#Danh mục sách">
+                         <button class="btn btn-large btn-white">Khám phá ngay</button>
+                    </a>
+                </div>
+            </section>
+                <!-- Categories Section -->
+                 <section id="Danh mục sách">
+                <section class="categories">
+                    <h2 class="section-title">Danh mục sách</h2>
+                    <div class="category-grid">
+                        <a href="./html/vanhoc/vanhoc.html">
+                            <div class="category-card">
+                                <!-- Đây là nơi chúng ta thay đổi URL hình ảnh cho danh mục Văn học -->
+                                <img src="./asset/img/vanhoc_tieuthuyet/nhagiakim.jpg" alt="Văn học">
+                                <h3>Văn học</h3>
+                            </div>
+                        </a>
+                        
+                        <a href="./html/khoahoc/khoahoc.html">
+                            <div class="category-card">
+                                <img src="./asset/img/khoahoc/1461.jpg" alt="Khoa học">
+                                <h3>Khoa học</h3>
+                            </div>
+                        </a>
+                        
+                        <a href="./html/kinhte/kinhte.html">
+                            <div class="category-card">
+                                <img src="./asset/img/kinhte/Top-nhung-quyen-sach-kinh-te-hoc-hay-nen-doc.jpg" alt="Kinh tế">
+                                <h3>Kinh tế</h3>
+                            </div>
+                        </a>
+                        
+                        <a href="./html/tamlihoc/tamlihoc.html">
+                            <div class="category-card">
+                                <img src="./asset/img/tamlihoc/tamlihoc.jpg" alt="Tâm lý học">
+                                <h3>Tâm lý học</h3>
+                            </div>
+                        </a>
+                        
+                        <a href="./html/ngoaingu/ngoaingu.html">
+                            <div class="category-card">
+                                <img src="./asset/img/ngoaingu/banner-3-new-1.jpg" alt="Ngoại ngữ">
+                                <h3>Ngoại ngữ</h3>
+                            </div>
+                        </a>
+                        
+                    </div>
+                </section>
+            </section>
+
+                <!-- Featured Books Section -->
+                <section class="featured-books">
+                    <h2 class="section-title">Sách nổi bật</h2>
+                    <div class="book-grid">
+                        <div class="book-card" data-book-id="1">
+                            <a href="./html/vanhoc/sach/dacnhantam.html">
+                                <div class="book-cover">
+                                    <img src="./asset/img/vanhoc_tieuthuyet/dacnhantam.jpg" alt="Đắc Nhân Tâm">
+                                </div>
+                                <div class="book-info">
+                                    <h3 class="book-title">Đắc Nhân Tâm</h3>
+                                    <p class="book-author">Dale Carnegie</p>
+                                    <div class="book-meta">
+                                        <span class="book-year">2019</span>
+                                        <div class="download-count">
+                                            <i>⬇️</i>
+                                            <span>1,245</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                            
+                        </div>
+
+                        <div class="book-card" data-book-id="2">
+                            <a href="./html/vanhoc/sach/nhagiakim.html">
+                                <div class="book-cover">
+                                    <img src="./asset/img/vanhoc_tieuthuyet/nhagiakim2.jpg" alt="Nhà Giả Kim">
+                                </div>
+                                <div class="book-info">
+                                    <h3 class="book-title">Nhà Giả Kim</h3>
+                                    <p class="book-author">Paulo Coelho</p>
+                                    <div class="book-meta">
+                                        <span class="book-year">2020</span>
+                                        <div class="download-count">
+                                            <i>⬇️</i>
+                                            <span>986</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                            
+                        </div>
+
+                        <div class="book-card" data-book-id="3">
+                            <a href="./html/vanhoc/sach/toitaigioi.html">
+                                <div class="book-cover">
+                                    <img src="./asset/img/vanhoc_tieuthuyet/toitaigioi.jpg" alt="Tôi Tài Giỏi, Bạn Cũng Thế">
+                                </div>
+                                <div class="book-info">
+                                    <h3 class="book-title">Tôi Tài Giỏi, Bạn Cũng Thế</h3>
+                                    <p class="book-author">Adam Khoo</p>
+                                    <div class="book-meta">
+                                        <span class="book-year">2018</span>
+                                        <div class="download-count">
+                                            <i>⬇️</i>
+                                            <span>765</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                            
+                        </div>
+
+                        <div class="book-card" data-book-id="4">
+                            <a href="./html/vanhoc/sach/luocsuloainguoi.html">
+                                <div class="book-cover">
+                                    <img src="./asset/img/vanhoc_tieuthuyet/luocsuloainguoi.jpg" alt="Sapiens: Lược Sử Loài Người">
+                                </div>
+                                <div class="book-info">
+                                    <h3 class="book-title">Sapiens: Lược Sử Loài Người</h3>
+                                    <p class="book-author">Yuval Noah Harari</p>
+                                    <div class="book-meta">
+                                        <span class="book-year">2021</span>
+                                        <div class="download-count">
+                                            <i>⬇️</i>
+                                            <span>542</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Reviews Section -->
+                 <section class="reviews" id="reviews">
+                <section class="review-section">
+                    <h2 class="section-title">Góc Review Sách</h2>
+                    <div class="review-carousel">
+                        <div class="review-list">
+                        <div class="review-card">
+                            <h3>Nguyễn Thị Bắc</h3>
+                            <p><em>Lược Sử Loài Người</em></p>
+                            <p>Một cuốn sách đầy kiến thức và thú vị về lịch sử loài người. Rất đáng đọc!</p>
+                        </div>
+                        <div class="review-card">
+                            <h3>Lê Minh Hải </h3>
+                            <p><i>Tôi tài giỏi, bạn cũng thế </i></p>
+                            <p>Một cuốn sách đầy triết lý và ý nghĩa về cuộc sống. Rất đáng đọc!</p>
+                        </div>
+                        <div class="review-card">
+                            <h3>Vũ Phạm Vân Anh </h3>
+                            <p><i>Dám bị ghét </i></p>
+                            <p>Một cuốn sách truyền cảm hứng mạnh mẽ. Đọc xong cảm thấy tràn đầy năng lượng!</p>
+                        </div>
+                        <div class="review-card">
+                            <h3>Nguyễn Thị Thùy Linh </h3>
+                            <p><i>Đắc Nhân Tâm</i></p>
+                            <p>Một cuốn sách tuyệt vời giúp tôi thay đổi cách nhìn nhận cuộc sống và giao tiếp với mọi người.</p>
+                        </div>
+                        <div class="review-card">
+                            <h3>Đỗ Hương Giang</h3>
+                            <p><i>Nhà Giả Kim</i></p>
+                            <p>Câu chuyện đầy cảm hứng về hành trình theo đuổi ước mơ. Một tác phẩm không thể bỏ qua!</p>
+                        </div>
+                        <div class="review-card">
+                            <h3>Nguyễn Thị Hưng</h3>
+                            <p><i>Cách học ngoại ngữ nhanh</i></p>
+                            <p>Một cuốn sách hữu ích với phương pháp học tập khoa học và dễ áp dụng. Giúp người học tiết kiệm thời gian và duy trì động lực học ngoại ngữ mỗi ngày!</p>
+                        </div>
+                        <button class="scroll-btn left"></button>
+                        <button class="scroll-btn right"></button>
+                    </div>
+                </div>
+            
+                  
+                </section>
+            </section>
+
+        </div>
+    </main>
+<!-- Upload Section -->
+<div id="upload" class="modal">
+    <div class="modal-content">
+        <span class="close" id="closeupload">&times;</span>
+        <h2>TẢI LÊN</h2>
+        <p>Chia sẻ cuốn sách yêu thích của bạn với mọi người bằng cách tải sách lên đây nhé</p>
+        <form id="upload-form">
+            <label for="book-title">Tiêu đề:</label>
+            <input type="text" id="book-title" name="book-title" required>
+
+            <label for="author">Tác giả:</label>
+            <input type="text" id="author" name="author" required>
+
+            <label for="category">Loại sách:</label>
+            <select id="category" name="category" required>
+                <option value="science">Khoa học</option>
+                <option value="psy">Tâm lý học</option>
+                <option value="educational">Giáo dục</option>
+                <option value="english">Ngoại ngữ</option>
+                <option value="technology">Công nghệ</option>
+                <option value="economy">Kinh tế</option>
+                <option value="other">Khác</option>
+            </select>
+
+            <label for="file">Tải sách lên (PDF):</label>
+            <input type="file" id="file" name="file" accept=".pdf" required>
+            
+            <button type="submit" class="btn btn-primary">Tải sách lên</button>
+        </form>
+        <div class="success-message" id="success-message">Tải sách thành công!</div>
+    </div>
+</div>
+        
+        <!-- Thay đổi button thành type="submit" để form có thể được xử lý bởi JavaScript -->
+        <button type="submit" class="btn-primary">Tải sách lên</button>
+    </form>
+    <div class="success-message" id="success-message">Tải sách thành công!</div>
+    </div>
+</section>
+<!-- Feedback Modal -->
+<div id="feedback" class="modal">
+    <div class="modal-content">
+        <span class="close" id="closeFeedback">&times;</span>
+        <h2>Hòm thư góp ý</h2>
+        <p>Đóng góp ý kiến để cải thiện BookHub</p>
+        
+        <form id="feedback-form">
+            <label for="feedback-topic">Tiêu đề</label>
+            <select id="feedback-topic" name="feedback-topic" class="input-field">
+                <option value="">Chọn chủ đề</option>
+                <option value="error">Báo lỗi</option>
+                <option value="suggestion">Đề xuất tính năng</option>
+                <option value="content">Góp ý về nội dung</option>
+                <option value="interface">Góp ý về giao diện</option>
+                <option value="other">Khác</option>
+            </select>
+
+            <label for="feedback-title">Tiêu đề</label>
+            <input type="text" id="feedback-title" class="input-field" placeholder="Nhập tiêu đề" name="feedback-title">
+
+            <label for="feedback-content">Nội dung</label>
+            <textarea id="feedback-content" class="input-field" placeholder="Nhập nội dung" name="feedback-content" rows="8"></textarea>
+            
+            <button type="submit" class="btn btn-primary">Gửi phản hồi</button>
+        </form>
+    </div>
+</div>
+<!-- Fixed Feedback Box -->
+<div class="fixed-feedback" id="fixedFeedbackBox">
+    <div class="bubble">Hòm thư góp ý</div>
+    <svg width="80" height="80" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="12" cy="12" r="11" fill="#0088ff"/>
+        <path d="M6 8L12 13L18 8M6 8V16C6 16.5523 6.44772 17 7 17H17C17.5523 17 18 16.5523 18 16V8M6 8H18" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+</div>
+
+<!--Footer ở đây-->
+    <footer>
+        <section id="contact">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>Liên hệ</h3>
+                <a href="mailto:support@bookhub.com">support@bookhub.com </a>
+                <p>Điện thoại: +84 123 456 789</p>
+            </div>
+            <div class="footer-section">
+                <h3>Địa chỉ</h3>
+                <a href="https://maps.app.goo.gl/Fi8rXrmFda9V4szh7" target="blank"> 79 Hồ Tùng Mậu, Mai Dịch, Cầu Giấy, Hà Nội </a>
+            </div>
+            <div class="footer-section">
+                <h3>Theo dõi chúng tôi</h3>
+                    <a href="https://www.facebook.com/people/BookHub-N%E1%BB%81n-t%E1%BA%A3ng-chia-s%E1%BA%BB-s%C3%A1ch-v%C3%A0-t%C3%A0i-li%E1%BB%87u/61575208331898/" target="blank">Facebook</a>| <a href="https://www.instagram.com/book_hub19/" target="blank">Instagram</a>            
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; Nhóm 19 BookHub. Tất cả các quyền được bảo lưu.</p>
+        </div>
+    </section>
+    </footer>
+    </footer>
+    
+</body>
+</html>

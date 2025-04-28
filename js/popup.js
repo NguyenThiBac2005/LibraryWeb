@@ -126,6 +126,7 @@ document.addEventListener("DOMContentLoaded", function () {
       const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
       return re.test(email);
  }
+});
 
 // Hiển thị thông báo tải xuống thành công
 // Đợi cho tài liệu HTML được tải hoàn toàn
@@ -149,6 +150,5 @@ document.addEventListener("DOMContentLoaded", function () {
       }, 3000);
 
     };
-});
 });
     

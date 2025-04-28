@@ -1,4 +1,18 @@
-
+/* Modal Styles */
+.modal {
+    display: none; /* Ẩn modal theo mặc định */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(59, 5, 255, 0); /* Màu nền mờ */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 .modal-content {
     background-color: white;

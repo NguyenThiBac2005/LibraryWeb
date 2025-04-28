@@ -8,7 +8,7 @@
     width: 100%;
     height: 100%;
     overflow: auto;
-    background-color: rgba(59, 5, 255, 10); /* Màu nền mờ */
+   
     display: flex;
     justify-content: center;
     align-items: center;

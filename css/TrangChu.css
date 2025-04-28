@@ -190,7 +190,7 @@ font-size: 0.8em;
 
 .avatar {
 content: "";
-display: inline-block;
+display: inline-flexbox;
 vertical-align: middle;
 width: 2.5em;
 height: 2.5em;

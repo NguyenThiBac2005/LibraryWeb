@@ -82,7 +82,7 @@ function handleUpload(e) {
         // Lưu thông tin sách vào localStorage
         saveBook(bookInfo);
         
-        // Hiển thị thông báo thành công
+       // Hiển thị thông báo thành công
         showSuccessMessage();
         
         // Reset form

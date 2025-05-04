@@ -8,7 +8,7 @@
     width: 100%;
     height: 100%;
     overflow: auto;
-    background-color: rgba(0, 0, 0, 0.5); /* Màu nền mờ */
+    background-color: rgba(99, 2, 255, 0); /* Màu nền mờ */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -86,38 +86,4 @@
 
 .close:hover {
     color: #007bff;
-}
-
-/* Responsive Design */
-@media (max-width: 480px) {
-    .modal-content {
-        width: 90%;
-        padding: 20px;
-    }
-
-    .modal-content h2 {
-        font-size: 20px;
-    }
-
-    .modal-content button {
-        font-size: 14px;
-    }
-}
-
-.input-field {
-    width: 100%;
-    padding: 1.2rem 1rem 0.8rem;
-    background: white;
-    border: 2px solid rgba(255, 255, 255, 0.1);
-    border-radius: 8px;
-    color: black;
-    font-size: 1rem;
-    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-}
-.input-field:focus {
-    outline: none;
-    border-color: transparent;
-    box-shadow: 0 0 0 2px #4ecdc4, 0 0 20px #4ecdc4;
-    background: rgb(172, 229, 240);
-    transform: translateY(-2px);
 }

@@ -114,4 +114,29 @@ document.addEventListener('DOMContentLoaded', function() {
             registerModal.style.display = 'none';
         });
     }
+        document.addEventListener('DOMContentLoaded', function() {
+            var feedbackBox = document.getElementById('fixedFeedbackBox');
+            var feedbackModal = document.getElementById('feedback');
+            var closeFeedbackBtn = document.getElementById('closeFeedback');
+            
+            // Ensure modal is hidden on page load
+            feedbackModal.style.display = 'none';
+            
+            // Show modal when feedback box is clicked
+            feedbackBox.addEventListener('click', function() {
+                feedbackModal.style.display = 'block';
+            });
+            
+            // Close modal when close button is clicked
+            closeFeedbackBtn.addEventListener('click', function() {
+                feedbackModal.style.display = 'none';
+            });
+            
+            // Close modal when clicking outside
+            window.addEventListener('click', function(event) {
+                if (event.target == feedbackModal) {
+                    feedbackModal.style.display = 'none';
+                }
+            });
+        });
 });

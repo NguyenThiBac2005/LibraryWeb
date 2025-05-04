@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="../../css/auth.css"> <!-- Đường dẫn CSS cho popup -->
     <link rel="stylesheet" href="../../css/homthugopy.css"> <!-- CSS cho hòm thư góp ý -->
     <link rel ="icon" href="../../asset/img/anh-logo.png" type="image/x-icon">
+    <script src="../../js/popup.js"></script>
+    <script scr="../../js/homthugopy.js"></script>
 </head>
 <body>
  <!-- Thanh menu điều hướng -->
@@ -126,14 +128,42 @@
             </article>
         </section>
     </main>
-    <!-- Fixed Feedback Box -->
-    <div class="fixed-feedback" id="fixedFeedbackBox">
-        <div class="bubble">Hòm thư góp ý</div>
-        <svg width="80" height="80" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="12" cy="12" r="11" fill="#0088ff"/>
-            <path d="M6 8L12 13L18 8M6 8V16C6 16.5523 6.44772 17 7 17H17C17.5523 17 18 16.5523 18 16V8M6 8H18" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
+    <!-- Feedback Modal -->
+<div id="feedback" class="modal">
+    <div class="modal-content">
+        <span class="close" id="closeFeedback">&times;</span>
+        <h2>Hòm thư góp ý</h2>
+        <p>Đóng góp ý kiến để cải thiện BookHub</p>
+        
+        <form id="feedback-form">
+            <label for="feedback-topic">Tiêu đề</label>
+            <select id="feedback-topic" name="feedback-topic" class="input-field">
+                <option value="">Chọn chủ đề</option>
+                <option value="error">Báo lỗi</option>
+                <option value="suggestion">Đề xuất tính năng</option>
+                <option value="content">Góp ý về nội dung</option>
+                <option value="interface">Góp ý về giao diện</option>
+                <option value="other">Khác</option>
+            </select>
+
+            <label for="feedback-title">Tiêu đề</label>
+            <input type="text" id="feedback-title" class="input-field" placeholder="Nhập tiêu đề" name="feedback-title">
+
+            <label for="feedback-content">Nội dung</label>
+            <textarea id="feedback-content" class="input-field" placeholder="Nhập nội dung" name="feedback-content" rows="8"></textarea>
+            
+            <button type="submit" class="btn btn-primary">Gửi phản hồi</button>
+        </form>
     </div>
+</div>
+<!-- Fixed Feedback Box -->
+<div class="fixed-feedback" id="fixedFeedbackBox">
+    <div class="bubble">Hòm thư góp ý</div>
+    <svg width="80" height="80" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="12" cy="12" r="11" fill="#0088ff"/>
+        <path d="M6 8L12 13L18 8M6 8V16C6 16.5523 6.44772 17 7 17H17C17.5523 17 18 16.5523 18 16V8M6 8H18" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+</div>
 
     <footer>
         <div class="footer-container">
@@ -155,34 +185,5 @@
             <p>&copy; Nhóm 19 BookHub. Tất cả các quyền được bảo lưu.</p>
         </div>
     </footer>
-    <script src="../../js/popup.js"></script>
-    <!-- Modified JavaScript to ensure feedback box only shows when clicked -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            var feedbackBox = document.getElementById('fixedFeedbackBox');
-            var feedbackModal = document.getElementById('feedback');
-            var closeFeedbackBtn = document.getElementById('closeFeedback');
-            
-            // Ensure modal is hidden on page load
-            feedbackModal.style.display = 'none';
-            
-            // Show modal when feedback box is clicked
-            feedbackBox.addEventListener('click', function() {
-                feedbackModal.style.display = 'block';
-            });
-            
-            // Close modal when close button is clicked
-            closeFeedbackBtn.addEventListener('click', function() {
-                feedbackModal.style.display = 'none';
-            });
-            
-            // Close modal when clicking outside
-            window.addEventListener('click', function(event) {
-                if (event.target == feedbackModal) {
-                    feedbackModal.style.display = 'none';
-                }
-            });
-        });
-        </script>
 </body>
 </html>

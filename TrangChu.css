@@ -1,3 +1,202 @@
+/* Tạo container chứa logo và tên trang */
+.header-container {
+    display: flex;
+    align-items: left;
+    justify-content: left;
+    padding: 10px 0;
+  }
+  
+  /* Định dạng logo */
+  #logo {
+    margin-left: 5px; /* Khoảng cách giữa logo và tên trang */
+  }
+  
+  /* Định dạng tên trang */
+  .page-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0;
+  }
+  
+  /* Nếu muốn container căn giữa trong header */
+  header {
+    display: flex-start;
+    justify-content: center;
+    width: 100%;
+  }
+    /* CSS cho thông báo */
+  .notification {
+      display: none;
+      background-color: #dff0d8;
+      color: #3c763d;
+      padding: 10px 25px;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      border-radius: 4px;
+      border-left: 5px solid #3c763d;
+      font-size: 14px;
+    }
+    
+    .notification.show {
+      display: block;
+      animation: fadeIn 0.5s;
+    }
+    
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    
+    /* Làm cho nút bị vô hiệu hóa sau khi lưu */
+    .btn-outline:disabled {
+      opacity: 0.7;
+      cursor: default;
+    }
+   
+  /* Contact Section */
+  .contact-section {
+    padding: 50px 20px;
+    /* background-color: #f0f0f0; */
+  }
+  .contact-section p {
+    text-align: center;
+    margin: 12px 12px;
+  }
+  .contact-section form {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    height: 600px;
+  }
+  
+  .contact-section form label {
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  .contact-section form textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #bdc3c7;
+    margin-bottom: 20px;
+  }
+  .features {
+    margin: 20px;
+  }
+  
+  .feature {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .feature-icon {
+    margin-right: 15px;
+  }
+  
+  .feature-icon img {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .feature-description {
+    font-size: 16px;
+  }
+  
+  .feature-description h3 {
+    font-size: 18px;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  .feature-description p {
+    margin: 0;
+  }
+  
+  .main-footer {
+    background-color: #2c3e50;
+    color: #fff;
+    padding: 40px 20px;
+    text-align: center;
+    margin-top: auto;
+  }
+  
+  .main-footer p {
+    font-size: 14px;
+    margin: 5px 0;
+  }
+  
+  .main-footer a {
+    color: #f9f9f9;
+    text-decoration: underline;
+  }
+  .panel-body {
+    width: 90%;
+    margin: 2em auto;
+  }
+  
+  .helper-text {
+    color: #8A6D3B;
+    font-size: 12px;
+    margin-top: 5px;
+    height: 12px;
+    display: block;
+  }
+  
+  #list-view {
+  height: 100%;
+  overflow-y: scroll;
+  }
+  
+  #list-view ul,
+  #list-view li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  }
+  
+  #list-view ul {
+  counter-reset: index;
+  }
+  
+  #list-view li {
+  height: 5em;
+  border: none;
+  border-bottom: 1px solid #ddd;
+  counter-increment: index;
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  padding: 1em;
+  }
+  
+  li:hover {
+  background: #efefef;
+  cursor: pointer;
+  }
+  
+  li .name {
+  flex: 1;
+    
+  }
+  
+  li .name::after {
+  font-family: monospace;
+  font-size: 0.8em;
+  }
+  
+  .avatar {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  width: 2.5em;
+  height: 2.5em;
+  background: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjxzdmcgaGVpZ2h0PSIzMnB4IiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCAzMiAzMjsiIHZlcnNpb249IjEuMSIgdmlld0JveD0iMCAwIDMyIDMyIiB3aWR0aD0iMzJweCIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+PHN0eWxlIHR5cGU9InRleHQvY3NzIj4KCS5zdDB7ZmlsbDpub25lO3N0cm9rZTojNDM0MzQ1O3N0cm9rZS13aWR0aDoyO3N0cm9rZS1saW5lY2FwOnJvdW5kO3N0cm9rZS1saW5lam9pbjpyb3VuZDtzdHJva2UtbWl0ZXJsaW1pdDoxMDt9Cgkuc3Qxe2ZpbGw6IzQzNDM0NTt9Cjwvc3R5bGU+PGcgaWQ9IkxheWVyXzIiLz48ZyBpZD0iTGF5ZXJfMSI+PGc+PHBhdGggY2xhc3M9InN0MCIgZD0iTTMxLDE2YzAsNC42NTk5Ny0yLjEzLDguODI5OTYtNS40Njk5NywxMS41Nzk5NkMyMi45NCwyOS43MTk5NywxOS42MiwzMSwxNiwzMSAgICBzLTYuOTQtMS4yODAwMy05LjUzMDAzLTMuNDIwMDRDMy4xMywyNC44Mjk5NiwxLDIwLjY1OTk3LDEsMTZDMSw3LjcxOTk3LDcuNzE5OTcsMSwxNiwxUzMxLDcuNzE5OTcsMzEsMTZ6Ii8+PHBhdGggY2xhc3M9InN0MCIgZD0iTTIyLjUsMTEuNWMwLDIuNDUyNjMtMS4zNjA2Nyw1LjQwNzk5LTMuMzgwMDIsNy4wMjg2NWMtMC4wMzQ2NSwwLjAyNjAzLTAuMDY5MjksMC4wNTItMC4xMDM5OSwwLjA3ODAyICAgIGMtMC45MDEzMiwwLjcwMi0xLjkyMzk3LDEuMTI2NjYtMy4wMTU5OCwxLjEyNjY2cy0yLjExNDY3LTAuNDI0NjYtMy4wMTU5OC0xLjEyNjY2Yy0wLjAzNDctMC4wMjYwMy0wLjA2OTM1LTAuMDUyLTAuMTA0LTAuMDc4MDIgICAgQzEwLjg2MDY3LDE2LjkwNzk5LDkuNSwxMy45NTI2Myw5LjUsMTEuNUM5LjUsNy45MTE5OSwxMi40MTE5OSw1LDE2LDVTMjIuNSw3LjkxMTk5LDIyLjUsMTEuNXoiLz48cGF0aCBjbGFzcz0ic3QwIiBkPSJNMjUuNTMwMDMsMjcuNTI5OTd2MC4wNDk5OUMyMi45NCwyOS43MTk5NywxOS42MiwzMSwxNiwzMXMtNi45NC0xLjI4MDAzLTkuNTMwMDMtMy40MjAwNHYtMC4wNDk5OSAgICBjMC00LjE2OTk4LDIuNjcwMDQtNy43MTk5Nyw2LjQxMDAzLTljMC4wMjk5NywwLjAyMDAyLDAuMDcwMDEsMC4wNDk5OSwwLjA5OTk4LDAuMDgwMDIgICAgYzAuOTEwMDMsMC43MDAwMSwxLjkyOTk5LDEuMTIsMy4wMjAwMiwxLjEyczIuMTA5OTktMC40MTk5OCwzLjAyMDAyLTEuMTJjMC4wMjk5Ny0wLjAzMDAzLDAuMDcwMDEtMC4wNiwwLjA5OTk4LTAuMDgwMDIgICAgQzIyLjg1OTk5LDE5LjgxLDI1LjUzMDAzLDIzLjM1OTk5LDI1LjUzMDAzLDI3LjUyOTk3eiIvPjwvZz48L2c+PC9zdmc+");
+  background-size: 100%;
+  }
 .hero {
     position: relative;
     padding: 80px 20px;
@@ -13,7 +212,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('https://gcs.tripi.vn/public-tripi/tripi-feed/img/482780IhP/anh-mo-ta.png');
+    background-image: url(/asset/img/anh-mo-ta.png);
     background-size: cover;
     background-position: center;
     opacity: 0.8; /* Tăng độ rõ nét của hình nền */
@@ -262,7 +461,7 @@ main {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('https://gcs.tripi.vn/public-tripi/tripi-feed/img/482780IhP/anh-mo-ta.png');
+    background-image: url('/asset/img/anh-mo-ta.png');
     background-size: cover;
     background-position: center;
     opacity: 0.8; /* Tăng độ rõ nét của hình nền */
@@ -439,9 +638,118 @@ main {
 .download-count i {
     margin-right: 5px;
     color: var(--primary-color);
+    
+}
+.interactive-rating {
+  width: 300px;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  font-family: Arial, sans-serif;
+}
+
+.interactive-rating h3 {
+  margin-top: 0;
+  font-size: 18px;
+  color: #333;
+}
+
+.stars {
+  display: flex;
+  gap: 5px;
+  margin: 10px 0;
+}
+
+.star {
+  font-size: 25px;
+  color: #ccc;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.star.selected,
+.star:hover,
+.star:hover ~ .star {
+  color: #FFD700;
+}
+
+#ratingValue {
+  font-size: 14px;
+  color: #666;
 }
 
 /* Reviews Section */
+.review-section {
+    margin: 40px;
+    text-align: center;
+  }
+  
+  .review-carousel {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .review-list {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+  }
+  
+  .review-card {
+    flex: 0 0 250px;
+    margin: 10px;
+    padding: 15px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  }
+  
+  .scroll-btn {
+    position: absolute;
+    top: 40%;
+    background-color: white;
+    color: white;
+    border: none;
+    font-size: 18px;
+    padding: 8px 12px;
+    cursor: pointer;
+    z-index: 1;
+  }
+  
+  .scroll-btn.left {
+    left: 0;
+  }
+  
+  .scroll-btn.right {
+    right: 0;
+  }
+  
+  .review-form {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .review-form input, .review-form textarea {
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+  }
+  
+  .review-form button {
+    background-color: #007BFF;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  
 .review-slider {
     position: relative;
     overflow: hidden; /* Ẩn các review vượt quá vùng hiển thị */

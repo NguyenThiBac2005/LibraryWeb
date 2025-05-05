@@ -61,6 +61,7 @@ document.addEventListener('DOMContentLoaded', function() {
             feedbackModal.style.display = 'none';
         });
     }
+    
 
     // Code cho upload modal (giữ nguyên)
     const uploadModal = document.getElementById('upload');

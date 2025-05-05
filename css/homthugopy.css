@@ -52,6 +52,9 @@
         transform: translateY(0px);
     }
 }
+.floating-icon {
+    animation: float 2s ease-in-out infinite;
+}
 
 /* CSS cho feedback modal */
 #feedback .modal-content {

@@ -42,17 +42,16 @@ document.addEventListener('DOMContentLoaded', function() {
             
             // Get form values
             const topic = document.getElementById('feedback-topic').value;
-            const title = document.getElementById('feedback-title').value;
             const content = document.getElementById('feedback-content').value;
             
             // Validate form
-            if (!topic || !title || !content) {
+            if (!topic || !content) {
                 alert('Vui lòng điền đầy đủ thông tin!');
                 return;
             }
             
             // Here you would normally send the data to your server
-            console.log({topic, title, content});
+            console.log({topic,content});
             
             // Show success message
             alert('Cảm ơn bạn đã gửi phản hồi!');

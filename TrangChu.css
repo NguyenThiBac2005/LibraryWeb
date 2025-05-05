@@ -212,7 +212,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url(/asset/img/anh-mo-ta.png);
+    background-image: url('/asset/img/anh-mo-ta.png');
     background-size: cover;
     background-position: center;
     opacity: 0.8; /* Tăng độ rõ nét của hình nền */
@@ -461,7 +461,7 @@ main {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('/asset/img/anh-mo-ta.png');
+    background-image: url('https://gcs.tripi.vn/public-tripi/tripi-feed/img/482780IhP/anh-mo-ta.png');
     background-size: cover;
     background-position: center;
     opacity: 0.8; /* Tăng độ rõ nét của hình nền */
@@ -499,7 +499,6 @@ main {
 .btn-white:hover {
     background-color: #f0f0f0;
 }
-
 /* Hero Section */
 .hero {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/api/placeholder/1200/400');
